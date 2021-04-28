@@ -44,14 +44,15 @@
 }
 
 .header-search {
-    width: 445px;
-    height: 41px;
+    width: 25vw;
+    height: 5vh;
     position: absolute;
     top: 50%;
+    bottom: 50%;
     transform: translateY(-50%);
     right: 90px;
-    border-width: 4px;
-    border-color: black;
+    border-width: 2px;
+    border-color: #463A41;
 }
 
 .header-avatar {
