@@ -2,7 +2,7 @@
 /* Não achei a fonte Sitara no google fonts - Thiago */
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
-/* Resete em configurações padrão do browser */
+/* Reset em configurações padrão do browser */
 body {
     margin: 0;
     font-family: 'PT Mono', monospace;
