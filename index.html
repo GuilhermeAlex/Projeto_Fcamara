@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Projeto Fcamara</title>
     <link rel="stylesheet" href="./css/body.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
     <header class="header-desktop">
 
@@ -35,8 +40,8 @@
         <!-- Div contendo a barra de pesquisa e o ícone de avatar. -->
         <!-- Agrupados para facilitar o posicionamento à direita. -->
         <div class="header-search-avatar">
-            
-            <input type="text" class = "header-search" placeholder="Títulos, gêneros..." data-search>
+
+            <input type="text" class="header-search" placeholder="Títulos, gêneros..." data-search>
 
             <img src="imagens/avatar.png" class="header-avatar" alt="Avatar do usuário" data-avatar>
 
@@ -44,20 +49,81 @@
 
     </header>
     <main>
-        <section class="main-principal" data-main-principal>
+
+        <!-- Inicio Carousel contendo os 3 destaques-->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./imagens/7monstrinhos-1024x517.jpg" alt="Primeiro Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Testando Destaque Slide 1</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
+                            eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
+                            quod unde odit.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./imagens/SuperPoderosas-1024x517.jpg" alt="Segundo Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Testando Destaque Slide 2</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
+                            eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
+                            quod unde odit.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./imagens/jetsons-1024x517.png" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Testando Destaque Slide 3</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
+                            eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
+                            quod unde odit.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
+        <!-- <section class="main-principal w-100" data-main-principal>
             <h2 class="h2-principal">Destaque</h2>
             <p class="info-filme">YYYY | Classificação | Gênero</p>
-            <p class="sinopse-filme">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum elementum ligula quis interdum. Mauris varius pharetra eros at luctus. Sed convallis justo mi, nec consequat massa commodo quis.</p>
-        </section>
+            <p class="sinopse-filme">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum elementum
+                ligula quis interdum. Mauris varius pharetra eros at luctus. Sed convallis justo mi, nec consequat massa
+                commodo quis.</p>
+        </section> -->
+
+        <!-- Final Carousel -->
+
+        <!-- <section class="main-principal w-100" data-main-principal>
+            <h2 class="h2-principal">Destaque</h2>
+            <p class="info-filme">YYYY | Classificação | Gênero</p>
+            <p class="sinopse-filme">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum elementum
+                ligula quis interdum. Mauris varius pharetra eros at luctus. Sed convallis justo mi, nec consequat massa
+                commodo quis.</p>
+        </section> -->
     </main>
     <footer>
 
     </footer>
     <!-- JavaScript -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
