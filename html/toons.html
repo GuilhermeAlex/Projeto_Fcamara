@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toons</title>
     <link rel="shortcut icon" href="../imagens/favicon-placeholder.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -45,18 +46,174 @@
     <main class="toons">
         <div class="desenhos">
             <h2>Mais Procurados</h2>
+            <!-- Grid contendo 9 desenhos -->
             <section class="grid-mais-procurados">
-                <div class="item"><img src="../imagens/7monstrinhos-1024x517.jpg" alt="Capa do desenho 'Os sete monstrinhos'." class="toons-desenhos"></div>
-                <div class="item"><img src="../imagens/jetsons-1024x517.jpg" alt="Capa do desenho 'Os Jetsons'." class="toons-desenhos"></div>
-                <div class="item"><img src="../imagens/SuperPoderosas-1024x517.jpg" alt="Capa do desenho 'As meninas superpoderosas'." class="toons-desenhos"></div>
-                <div class="item"><img src="../imagens/cailou-1024x517.jpg" alt="Capa do desenho 'Caillou'." class="toons-desenhos"></div>
-                <div class="item"><img src="../imagens/scooby-doo-1024x517.jpg" alt="Capa do desenho 'Scooby-doo'." class="toons-desenhos"></div>
-                <div class="item"><img src="../imagens/flintstones-1024x517.jpg" alt="Capa do desenho 'Os Flintstones'." class="toons-desenhos"></div>
-                <div class="item"><img src="../imagens/samurai-jack-1024x517.jpg" alt="Capa do desenho 'Samurai Jack'." class="toons-desenhos"></div>
-                <div class="item"><img src="../imagens/coragem-o-cao-covarde-1024x517.jpg" alt="Capa do desenho 'Coragem o cão covarde'." class="toons-desenhos"></div>
-                <div class="item"><img src="../imagens/hey-arnold-1024x517.jpg" alt="Capa do desenho 'Hey Arnold'." class="toons-desenhos"></div>
+                
+                <!-- Os sete monstrinhos -->
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-os-sete-monstrinhos">
+                        <img src="../imagens/7monstrinhos-1024x517.jpg" alt="Capa do desenho 'Os sete monstrinhos'." class="toons-desenhos">
+
+                    </button>
+                </div>
+                <div class="modal fade modal-os-sete-monstrinhos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>Os sete monstrinhos</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Os sete monstrinhos -->
+                
+                <!-- Os Jetsons -->
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-os-jetsons">
+                        <img src="../imagens/jetsons-1024x517.jpg" alt="Capa do desenho 'Os Jetsons'." class="toons-desenhos">
+
+                    </button>
+                </div>
+                <div class="modal fade modal-os-jetsons" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>Os Jetsons</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Os Jetsons -->
+                
+                <!-- As meninas superpoderosas -->
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-as-meninas-super-poderosas">
+                        <img src="../imagens/SuperPoderosas-1024x517.jpg" alt="Capa do desenho 'As meninas superpoderosas'." class="toons-desenhos">
+
+                    </button>
+                </div>
+                <div class="modal fade modal-as-meninas-super-poderosas" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>As meninas super poderosas</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim As meninas superpoderosas -->
+
+                <!-- Caillou -->
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-caillou">
+                        <img src="../imagens/cailou-1024x517.jpg" alt="Capa do desenho 'Caillou'." class="toons-desenhos">
+
+                    </button>
+                </div>
+                <div class="modal fade modal-caillou" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>Caillou</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Caillou -->
+                
+                <!-- Scooby Doo -->
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-scooby-doo">
+                        <img src="../imagens/scooby-doo-1024x517.jpg" alt="Capa do desenho 'Scooby-doo'." class="toons-desenhos">
+
+                    </button>
+                </div>
+                <div class="modal fade modal-scooby-doo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>Scooby Doo</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Scooby Doo -->
+
+                <!-- Os Flintstones -->
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-os-flintstones">
+                        <img src="../imagens/flintstones-1024x517.jpg" alt="Capa do desenho 'Os Flintstones'." class="toons-desenhos">
+
+                    </button>
+                </div>
+                <div class="modal fade modal-os-flintstones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>Os Flintstones</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Os Flintstones -->
+
+                <!-- Samurai Jack -->
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-samurai-jack">
+                        <img src="../imagens/samurai-jack-1024x517.jpg" alt="Capa do desenho 'Samurai Jack'." class="toons-desenhos">
+
+                    </button>
+                </div>
+                <div class="modal fade modal-samurai-jack" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>Samurai Jack</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Samurai Jack -->
+
+                <!-- Coragem, o cão covarde -->
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-coragem">
+                        <img src="../imagens/coragem-o-cao-covarde-1024x517.jpg" alt="Capa do desenho 'Coragem, o cão covarde'." class="toons-desenhos">
+                    </button>
+                </div>
+                <div class="modal fade modal-coragem" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>Coragem, o cão covarde</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Coragem, o cão covarde -->
+                
+                <!-- Hey Arnold --> 
+                <div class="item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-arnold">
+                        <img src="../imagens/hey-arnold-1024x517.jpg" alt="Capa do desenho 'Hey Arnold'." class="toons-desenhos">
+                    </button>
+                </div>
+                <div class="modal fade modal-arnold" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                                <h1>Hey Arnold</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, obcaecati. Et eveniet reiciendis cum quos quidem assumenda cupiditate, animi laboriosam, nulla modi non quasi itaque nostrum sed commodi possimus molestiae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid quia molestias alias voluptatem veniam animi atque dicta rerum enim error eum laborum fuga deserunt dolores, quos nisi facere </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Hey Arnold -->
+
             </section>
         </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
