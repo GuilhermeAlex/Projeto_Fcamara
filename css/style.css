@@ -82,7 +82,9 @@ body {
     height: 70px;
     border-radius: 50px;
 }
-/* ==== Final do Header ==== */
+/* ==== Final do header ==== */
+
+/* ==== Início da home ==== */
 
 /* ==== Início do main ==== */
 /* main {
@@ -134,3 +136,29 @@ body {
     left: 12px;
 }
 /* ==== Final do main ==== */
+
+/* ==== Final da home ==== */
+
+/* ==== Inicio da toons ==== */
+
+.toons {
+    background-color: #463A41;
+}
+
+.toons h2 {
+    margin-top: 0;
+    padding: 1em 1em 0.2em;
+    color: #F7F8F5;
+}
+
+.grid-mais-procurados {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+}
+.item {
+    background-color: #816666;
+    text-align: center;
+    margin: 2vh 3vw;
+    height: 200px;
+}
