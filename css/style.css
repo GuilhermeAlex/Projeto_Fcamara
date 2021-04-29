@@ -148,7 +148,8 @@ body {
 .toons h2 {
     margin-top: 0;
     padding: 1em 1em 0.2em;
-    color: #F7F8F5;
+    color: #503092;
+    font-weight: bold;
 }
 
 .grid-mais-procurados {
@@ -187,7 +188,8 @@ body {
 
 .modal-content {
     padding: 20px;
-    background-color: lightcoral;
+    background-color: #503092;
+    color: #F7F8F5;
 }
 
 /* ==== Fim da toons ==== */
