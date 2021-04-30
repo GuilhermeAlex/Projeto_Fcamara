@@ -148,10 +148,16 @@ body {
 
 /* Estilização do destaque */
 
-/* .carousel-caption {
+.carousel-caption {
     color: #F7F8F5;
-    background: #503092;
-} */
+}
+
+.caption-container {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #503092;
+}
 /* ==== Final do main ==== */
 
 /* ==== Final da home ==== */
