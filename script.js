@@ -1,16 +1,36 @@
 "use strict"
 // ==== Mecanismo de busca ====
-const input = document.querySelector(".header-search")
-const h2Desenhos = document.querySelector("[data-desenhos]")
-const desenhosElement = document.querySelector(".desenhos")
-const desenhosArray = desenhosElement.querySelectorAll(".item")
-let achados = 0
+const input = document.querySelector("[data-search]")
+const pathPaginaToons = "/html/toons.html"
 
-// Adiciona um Event listener que aciona a função pesquisar se for apertado Enter
+// Como o mesmo script está sendo usado para mais de uma página, esse if declara as váriaveis da página toons apenas se o script for chamado a partir dela.
+if (window.location.pathname == pathPaginaToons){
+    var h2Desenhos = document.querySelector("[data-desenhos]")
+    var desenhosElement = document.querySelector(".desenhos")
+    var desenhosArray = desenhosElement.querySelectorAll(".item")
+    var achados = 0
+    input.value = window.localStorage.getItem("pesquisa")
+    window.localStorage.clear()
+    // Se o usuário estiver vindo de outra página e algo tiver sido registrado na barra de pesquisa, lança um focus nela.
+    if (input.value != "")
+    {
+        input.focus()
+        pesquisar()
+    }
+}
+
+
+// Adiciona um Event listener que aciona a função pesquisar sempre que é digitada uma letra nova
 input.addEventListener('keydown', pesquisar)
 input.addEventListener('keyup', pesquisar)
 
 function pesquisar (event) {
+    // Verifica se o usuário se encontra na página do catalógo, caso não se encontre, encaminha para ela.
+    if (window.location.pathname != pathPaginaToons)
+    {
+        window.localStorage.setItem("pesquisa", event.key)
+        return window.location.pathname = pathPaginaToons
+    }
     const busca = input.value.toUpperCase();
     // Se a caixa de pesquisa tiver vazia ele restaura todos e retorna
     if (input.value == '')
