@@ -9,7 +9,15 @@ if (window.location.pathname == pathPaginaToons){
     var desenhosElement = document.querySelector(".desenhos")
     var desenhosArray = desenhosElement.querySelectorAll(".item")
     var achados = 0
-    input.value = window.localStorage.getItem("pesquisa")
+    if (window.localStorage.getItem("pesquisa") != null)
+    {
+        if (window.localStorage.getItem("pesquisa").length <= 2)
+        {
+            input.value = window.localStorage.getItem("pesquisa")
+        } else {
+            input.focus()
+        }
+    }
     window.localStorage.clear()
     // Se o usuário estiver vindo de outra página e algo tiver sido registrado na barra de pesquisa, lança um focus nela.
     if (input.value != "")
