@@ -145,6 +145,12 @@ body {
     top: 199px;
     left: 12px;
 }
+
+/* Estilização do destaque */
+
+.carousel-caption {
+    color: black;
+}
 /* ==== Final do main ==== */
 
 /* ==== Final da home ==== */
