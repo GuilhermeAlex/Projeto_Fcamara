@@ -193,6 +193,11 @@ body {
     letter-spacing: -0.75px;
 }
 
+.toons h1 {
+    font-family: 'Poppins', monospace;
+    letter-spacing: -0.75px;
+}
+
 .grid-mais-procurados {
     display: grid;
     grid-template-columns: 33% 33% 33%;
