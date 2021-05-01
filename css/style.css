@@ -283,3 +283,29 @@ body {
     width: auto;
     border-radius: 50px;
 }
+
+.grid-imagem-esquerda {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+}
+
+.item-imagem-esquerda {
+    background: #503092;
+    padding: 6% 0 6% 0;
+    text-align: center;
+}
+
+.item-imagem-esquerda img {
+    max-height: 15vh;
+    width: auto;
+    border-radius: 50px;
+}
+
+.item-texto-direita {
+    padding: 3% 4% 6% 4%;
+    text-align: justify;
+}
