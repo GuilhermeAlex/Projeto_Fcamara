@@ -63,7 +63,8 @@ function pesquisar (event) {
     {   
         const elemento = desenhosArray[i]
         const nome = elemento.dataset.nome
-        if (nome.toUpperCase().indexOf(busca) == -1)
+        const genero = elemento.dataset.genero
+        if ((nome.toUpperCase().indexOf(busca) == -1) && (genero.toUpperCase().indexOf(busca) == -1))
         {
             elemento.style.display = "none"
             achados--
