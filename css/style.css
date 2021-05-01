@@ -258,3 +258,28 @@ body {
     font-family: 'Poppins', monospace;
     letter-spacing: -0.75px;
 }
+
+.grid-imagem-direita {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 3%;
+}
+
+.item-texto-esquerda {
+    padding: 3% 4% 6% 4%;
+    text-align: justify;
+}
+
+.item-imagem-direita {
+    background: #503092;
+    padding: 6% 0 6% 0;
+    text-align: center;
+}
+
+.item-imagem-direita img {
+    max-height: 15vh;
+    width: auto;
+    border-radius: 50px;
+}
