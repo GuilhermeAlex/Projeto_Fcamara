@@ -276,6 +276,8 @@ body {
     background: #503092;
     padding: 6% 0 6% 0;
     text-align: center;
+    font-family: 'Poppins', monospace;
+    color: #FFEC3E;
 }
 
 .item-imagem-direita img {
@@ -297,6 +299,8 @@ body {
     background: #503092;
     padding: 6% 0 6% 0;
     text-align: center;
+    font-family: 'Poppins', monospace;
+    color: #FFEC3E;
 }
 
 .item-imagem-esquerda img {
