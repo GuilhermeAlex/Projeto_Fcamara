@@ -84,7 +84,7 @@ body {
 }
 
 
-/* Ajustar o posicionamento do avatar na página Toons, tá desalinhando */
+/* Posicionamento do avatar ajustado */
 .header-avatar {
     width: auto;
     height: 4vh;
@@ -154,13 +154,14 @@ body {
 
  .caption-container {
     position: fixed;
-    top: 0;
+    top: 50%;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
     width: 100%;
     height: 200px;
+    padding-top: 3%;
     background-color: #503092;
 }
 /* ==== Final do main ==== */
