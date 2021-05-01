@@ -1,11 +1,13 @@
 /* ==== Início do body ==== */
 
 /* Importação das fontes*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 /* Reset em configurações padrão do browser */
 body {
     margin: 0;
-    font-family: 'PT Mono', monospace;
+    font-family: 'Alegreya Sans', monospace;
+    letter-spacing: 1px;
 }
 /* ==== Final do body ==== */
 
@@ -46,9 +48,10 @@ body {
 .nav-desktop li {
     display: inline-block;
     margin: 0 10px;
-    font-size: 1em;
+    font-size: 1.2em;
     font-variant: small-caps;
-    letter-spacing: 2px;
+    font-family: 'Poppins', monospace;
+    letter-spacing: -0.075px;
 }
 
 .nav-desktop a {
@@ -161,8 +164,12 @@ body {
     margin: auto;
     width: 100%;
     height: 200px;
-    padding-top: 3%;
     background-color: #503092;
+}
+
+.caption-container h1 {
+    font-family: 'Poppins', monospace;
+    letter-spacing: -0.75px;
 }
 /* ==== Final do main ==== */
 
@@ -178,6 +185,8 @@ body {
     margin-top: 0;
     padding: 1em 1em 0.2em;
     color: #FF66C4;
+    font-family: 'Poppins', monospace;
+    letter-spacing: -0.75px;
 }
 
 .grid-mais-procurados {
