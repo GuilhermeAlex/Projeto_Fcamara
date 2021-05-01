@@ -239,3 +239,22 @@ body {
 }
 
 /* ==== Fim da toons ==== */
+
+/* ==== Início da time ==== */
+
+.time {
+    background-color: white;
+}
+
+.time h2 {
+    margin-top: 0;
+    padding: 1em 1em 0.2em;
+    color: #FF66C4;
+    font-family: 'Poppins', monospace;
+    letter-spacing: -0.75px;
+}
+
+.time h1 {
+    font-family: 'Poppins', monospace;
+    letter-spacing: -0.75px;
+}
