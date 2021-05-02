@@ -93,14 +93,13 @@ body {
     width: 4vh;
     height: 4vh;
     border-radius: 50px;
-    /* bottom: 100%; */
     top: 50%;
     cursor: pointer;
 }
 
 .header-icones {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #503092;
     grid-template-columns: 25% 25% 25% 25%;
     justify-content: center;
@@ -184,6 +183,10 @@ body {
 }
 
 /* Estilização do destaque */
+
+.carousel-inner {
+    z-index: -1;
+}
 
 .carousel-caption {
     color: #F7F8F5;
