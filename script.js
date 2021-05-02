@@ -6,6 +6,8 @@ const pathPaginaToons = "/html/toons.html"
 // Como o mesmo script está sendo usado para mais de uma página, esse if declara as váriaveis da página toons apenas se o script for chamado a partir dela.
 if (window.location.pathname == pathPaginaToons){
     var h2Desenhos = document.querySelector("[data-desenhos]")
+    var h2Acessados = document.querySelector("[data-h2-acessados]")
+    var maisAcessados = document.querySelector("[data-acessados]")
     var desenhosElement = document.querySelector(".desenhos")
     var desenhosArray = desenhosElement.querySelectorAll(".item")
     var achados = 0
@@ -43,6 +45,8 @@ function pesquisar (event) {
     // Se a caixa de pesquisa tiver vazia ele restaura todos e retorna
     if (input.value == '')
     {
+        h2Acessados.style.display = "block"
+        maisAcessados.style.display = "grid"
         h2Desenhos.innerHTML = "Catálogo"
         for (let i = 0; i < desenhosArray.length; i++)
         {   
@@ -75,12 +79,15 @@ function pesquisar (event) {
     } else {
         h2Desenhos.innerHTML = `Foram encontrados ${achados} desenhos com base na pesquisa "${input.value}"`
     }
+    maisAcessados.style.display = "none"
+    h2Acessados.style.display = "none"
     achados = 0
 }
 
 // ==== Fim mecanismo de busca ====
 
 // ==== Início do sistema de troca de avatar ====
+
 const avatar = document.querySelector("[data-avatar]")
 const divIcones = document.querySelector(["[data-icones]"])
 
@@ -117,7 +124,7 @@ avatar.addEventListener('click', () => {
 atualizarIcones()
 // gera a lista de avatares disponíveis com base nos avatares registrados na lista icones
 function atualizarIcones() {
-    for(var i = 0; i< icones.length; i++)
+    for(let i = 0; i< icones.length; i++)
     {
         var element = document.createElement("li")
         element.className = "icone"
@@ -140,6 +147,57 @@ function trocarAvatar(element){
     window.localStorage.setItem("avatar", avatar.src.slice(avatar.src.indexOf("/imagens")))
 }
 
-window.localStorage.setItem("pesquisa", "")
-
 // ==== Fim do sistema de troca de avatar ====
+
+// ==== Acessados recentemente ====
+
+const acessadosRecente = document.querySelector("[data-acessados]")
+if (window.localStorage.getItem("recentes") != null)
+{
+    var listaRecentes = JSON.parse(window.localStorage.getItem("recentes"))
+    h2Acessados.style.display = "block"
+
+} else {
+    h2Acessados.style.display = "none"
+    var listaRecentes = []
+}
+
+function adicionaInteresse(element)
+{
+    if (listaRecentes.indexOf(element.dataset.nome) == -1)
+    {
+        listaRecentes.unshift(element.dataset.nome)
+    } else {
+        listaRecentes.splice(listaRecentes.indexOf(element.dataset.nome), 1)
+        listaRecentes.unshift(element.dataset.nome)
+    }
+    while(listaRecentes.length > 3)
+    {
+        listaRecentes.pop()
+    }
+
+    window.localStorage.setItem("recentes", JSON.stringify(listaRecentes))
+}
+
+atualizaRecentesNaTela(listaRecentes)
+function atualizaRecentesNaTela(lista)
+{
+    for(let i = 0; i < lista.length; i++)
+    {
+        let desenhoInteresseNome = lista[i]
+        for (let c = 0; c < desenhosArray.length; c++)
+        {   
+            var elemento = desenhosArray[c]
+            const nome = elemento.dataset.nome
+            if (desenhoInteresseNome.toUpperCase() == nome.toUpperCase())
+            {
+                var elemento = elemento.cloneNode(true)
+                acessadosRecente.appendChild(elemento)
+            }
+    }
+    }
+}
+
+// ==== Fim acessados recentemente ====
+
+window.localStorage.setItem("pesquisa", "")
