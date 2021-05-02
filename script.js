@@ -80,10 +80,11 @@ function pesquisar (event) {
 
 // ==== Fim mecanismo de busca ====
 
-//
+// ==== Início do sistema de troca de avatar ====
 const avatar = document.querySelector("[data-avatar]")
 const divIcones = document.querySelector(["[data-icones]"])
 
+// Verifica se o script está sendo acessado a partir da página index, pois o caminho para as imagens a partir dela é diferente.
 if (window.location.pathname == "/index.html")
 {
     var icones = ["/imagens/avatar-icons/default-avatar.png", "/imagens/avatar-icons/power-girl.jpg", "/imagens/avatar-icons/arnold.jpg", "/imagens/avatar-icons/coragem.jpg"]
@@ -101,6 +102,8 @@ if (window.location.pathname == "/index.html")
     }
 }
 
+// Coloca o display da janela de escolha de avatares como "none" e adiciona uma função ao avatar para que ao ser clicado mude o display da janela de icones
+
 divIcones.style.display = "none"
 avatar.addEventListener('click', () => {
     if (divIcones.style.display == "none"){
@@ -110,7 +113,9 @@ avatar.addEventListener('click', () => {
     }
 })
 
+
 atualizarIcones()
+// gera a lista de avatares disponíveis com base nos avatares registrados na lista icones
 function atualizarIcones() {
     for(var i = 0; i< icones.length; i++)
     {
@@ -125,6 +130,8 @@ function atualizarIcones() {
     }
 }
 
+// realiza a troca do avatar
+
 function trocarAvatar(element){
     element = element.target
     var temp = element.src
@@ -134,4 +141,5 @@ function trocarAvatar(element){
 }
 
 window.localStorage.setItem("pesquisa", "")
-// 
+
+// ==== Fim do sistema de troca de avatar ====
