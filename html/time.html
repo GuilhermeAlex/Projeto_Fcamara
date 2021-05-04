@@ -39,15 +39,26 @@
 
           <input type="text" class="header-search" placeholder="Títulos, gêneros..." data-search>
           
-          <img src="../imagens/avatar-icons/power-girl.jpg" class="header-avatar" alt="Avatar do usuário" data-avatar>
-          <ul class="header-icones" data-icones>
-
-          </ul>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-icones">
+            <img src="../imagens/avatar-icons/power-girl.jpg" class="header-avatar" alt="Avatar do usuário" data-avatar>
+          </button>
 
       </div>
 
   </header>
   <main class="time">
+      <!-- Modal dos ícones -->
+      <div class="modal fade modal-icones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <ul class="header-icones" data-icones>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do modal dos ícones -->
+
     <h2>Time</h2>
     
     <section class="grid-imagem-direita">
@@ -61,7 +72,7 @@
       </div>
       <div class="item-imagem-direita">
         <p>
-          <img src="/imagens/avatar.png">
+          <img src="../imagens/avatar-icons/default-avatar.png">
         </p>
         <p>NOME, IDADE</p>
       </div>
@@ -70,7 +81,7 @@
     <section class="grid-imagem-esquerda">
       <div class="item-imagem-esquerda">
         <p>
-          <img src="/imagens/avatar.png">
+          <img src="../imagens/avatar-icons/default-avatar.png">
         </p>
         <p>NOME, IDADE</p>
       </div>
@@ -94,7 +105,7 @@
         ultrices vestibulum neque. Praesent eget suscipit tortor, quis laoreet lacus.
       </div>
       <div class="item-imagem-direita">
-        <p><img src="/imagens/avatar.png"></p>
+        <p><img src="../imagens/avatar-icons/default-avatar.png"></p>
         <p>NOME, IDADE</p>
       </div>
     </section>
@@ -102,7 +113,7 @@
     <section class="grid-imagem-esquerda">
       <div class="item-imagem-esquerda">
         <p>
-          <img src="/imagens/avatar.png">
+          <img src="../imagens/avatar-icons/default-avatar.png">
         </p>
         <p>NOME, IDADE</p>
       </div>
@@ -115,5 +126,18 @@
         ultrices vestibulum neque. Praesent eget suscipit tortor, quis laoreet lacus.
       </div>
     </section>
+    <!-- JavaScript -->
     <script src="../script.js"></script>
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
   </main>
+</body>
+</html>
