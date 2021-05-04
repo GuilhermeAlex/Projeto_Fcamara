@@ -200,6 +200,13 @@ body {
     font-family: 'Poppins', monospace;
     letter-spacing: -0.75px;
 }
+
+/* Estilização jumbotron */
+
+.padronizar-imagens {
+    max-width: 100px;
+    height: auto;
+}
 /* ==== Final do main ==== */
 
 /* ==== Final da home ==== */
