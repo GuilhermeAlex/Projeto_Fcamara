@@ -39,14 +39,26 @@
 
             <input type="text" class="header-search" placeholder="Títulos, gêneros..." data-search>
             
-            <img src="../imagens/avatar-icons/power-girl.jpg" class="header-avatar" alt="Avatar do usuário" data-avatar>
-            <ul class="header-icones" data-icones>
-
-            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-icones">
+                <img src="../imagens/avatar-icons/power-girl.jpg" class="header-avatar" alt="Avatar do usuário" data-avatar>
+            </button>
+            
 
         </div>
     </header>
     <main class="toons">
+        <!-- Modal dos ícones -->
+        <div class="modal fade modal-icones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <ul class="header-icones" data-icones>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do modal dos ícones -->
+
         <div class="desenhos">
             <h2 data-h2-acessados>Acessados recentemente</h2>
             <section class="grid-mais-procurados" data-acessados>
