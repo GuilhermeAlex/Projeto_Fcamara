@@ -157,6 +157,23 @@ if (window.location.pathname == pathPaginaToons)
     }
     
     atualizaRecentesNaTela(listaRecentes)  
+    function atualizaRecentesNaTela(lista)
+    {
+        for(let i = 0; i < lista.length; i++)
+        {
+            let desenhoInteresseNome = lista[i]
+            for (let c = 0; c < desenhosArray.length; c++)
+            {   
+                var elemento = desenhosArray[c]
+                const nome = elemento.dataset.nome
+                if (desenhoInteresseNome.toUpperCase() == nome.toUpperCase())
+                {
+                    var elemento = elemento.cloneNode(true)
+                    acessadosRecente.appendChild(elemento)
+                }
+            }
+        }
+    }
 }
 
 
@@ -179,23 +196,7 @@ function adicionaInteresse(element)
     window.localStorage.setItem("recentes", JSON.stringify(listaRecentes))
 }
 
-function atualizaRecentesNaTela(lista)
-{
-    for(let i = 0; i < lista.length; i++)
-    {
-        let desenhoInteresseNome = lista[i]
-        for (let c = 0; c < desenhosArray.length; c++)
-        {   
-            var elemento = desenhosArray[c]
-            const nome = elemento.dataset.nome
-            if (desenhoInteresseNome.toUpperCase() == nome.toUpperCase())
-            {
-                var elemento = elemento.cloneNode(true)
-                acessadosRecente.appendChild(elemento)
-            }
-    }
-    }
-}
+
 // ==== Fim acessados recentemente ====
 
 window.localStorage.setItem("pesquisa", "")
