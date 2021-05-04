@@ -350,3 +350,35 @@ body {
     padding: 3% 4% 6% 4%;
     text-align: justify;
 }
+
+/* ==== Footer ==== */
+
+footer {
+    position: absolute;
+    text-align: center;
+    background-color: #503092;
+    margin: 0;
+    width: 100%;
+    padding: 1vh 0;
+}
+
+footer * {
+    margin: 0;
+}
+
+footer p {
+    color: #F7F8F5;
+}
+
+footer a , footer a:hover{
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.icone-github {
+    margin-left: .5em;
+    width: 1.5em;
+}
+
+/* ==== Fim footer ==== */
