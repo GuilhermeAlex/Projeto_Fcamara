@@ -141,23 +141,33 @@ function trocarAvatar(element){
 
 // ==== Acessados recentemente ====
 
-const acessadosRecente = document.querySelector("[data-acessados]")
-if (window.localStorage.getItem("recentes") != null)
-{
-    var listaRecentes = JSON.parse(window.localStorage.getItem("recentes"))
-    h2Acessados.style.display = "block"
+// Verifica se a página atual é a página do catálogo
+if (window.location.pathname == pathPaginaToons)
+{   
+    // Verifica se há algum desenho recentemente acessado, se houver carrega eles.
+    const acessadosRecente = document.querySelector("[data-acessados]")
+    if (window.localStorage.getItem("recentes") != null)
+    {
+        var listaRecentes = JSON.parse(window.localStorage.getItem("recentes"))
+        h2Acessados.style.display = "block"
 
-} else {
-    h2Acessados.style.display = "none"
-    var listaRecentes = []
+    } else {
+        h2Acessados.style.display = "none"
+        var listaRecentes = []
+    }
+    
+    atualizaRecentesNaTela(listaRecentes)  
 }
+
 
 function adicionaInteresse(element)
 {
+    // Verifica se o elemento clicado já está na lista de recentes
     if (listaRecentes.indexOf(element.dataset.nome) == -1)
     {
         listaRecentes.unshift(element.dataset.nome)
     } else {
+        // Se já estiver, muda a posição dele na lista para 0
         listaRecentes.splice(listaRecentes.indexOf(element.dataset.nome), 1)
         listaRecentes.unshift(element.dataset.nome)
     }
@@ -165,11 +175,10 @@ function adicionaInteresse(element)
     {
         listaRecentes.pop()
     }
-
+    // Atualiza a lista de recentes na memória local
     window.localStorage.setItem("recentes", JSON.stringify(listaRecentes))
 }
 
-atualizaRecentesNaTela(listaRecentes)
 function atualizaRecentesNaTela(lista)
 {
     for(let i = 0; i < lista.length; i++)
@@ -187,7 +196,6 @@ function atualizaRecentesNaTela(lista)
     }
     }
 }
-
 // ==== Fim acessados recentemente ====
 
 window.localStorage.setItem("pesquisa", "")
