@@ -8,9 +8,16 @@ body {
     margin: 0;
     font-family: 'Alegreya Sans', monospace;
     letter-spacing: 1px;
+    /*===teste modo noturno===*/
+
+    /*filter: invert(1) hue-rotate(180deg);*/
 }
 /* ==== Final do body ==== */
 
+/*img{
+    filter: invert(1) hue-rotate(180deg);
+
+}*/
 
 /* ==== Início do header ==== */
 .header-desktop{
@@ -350,4 +357,3 @@ body {
     padding: 3% 4% 6% 4%;
     text-align: justify;
 }
-
