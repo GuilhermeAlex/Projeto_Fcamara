@@ -137,7 +137,7 @@ body {
     height: 40vh;
     top: 25px;
     margin: 0 auto;
-    background: linear-gradient(230deg, #F7F8F5 -9.82%, rgba(255, 255, 255, 0.71875) -9.81%, rgba(255, 255, 255, 0) 67.96%), #503092;
+    background: var(--primary-color);/*linear-gradient(230deg, #F7F8F5 -9.82%, rgba(255, 255, 255, 0.71875) -9.81%, rgba(255, 255, 255, 0) 67.96%), #503092;*/
 }
 
 .h2-principal {
@@ -377,3 +377,20 @@ footer a , footer a:hover{
 }
 
 /* ==== Fim footer ==== */
+
+/* Modo Norturno*/ 
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+/*
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary color: #fff;
+}
+/*
