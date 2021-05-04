@@ -2,194 +2,281 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Projeto Fcamara</title>
-    <link rel="shortcut icon" href="imagens/favicon-placeholder.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Projeto Fcamara</title>
+  <link rel="shortcut icon" href="imagens/favicon-placeholder.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="header-desktop">
+  <header class="header-desktop">
 
-        <!-- Está com a logo da alura que é apenas o placeholder. -->
-        <!-- Logo inserida dentro da div para facilitar o css. -->
-        <div class="logo">
-            <img src="imagens/alura-logo-placeholder.png" alt="Logo ToonsVille" class="header-logo">
+    <!-- Está com a logo da alura que é apenas o placeholder. -->
+    <!-- Logo inserida dentro da div para facilitar o css. -->
+    <div class="logo">
+      <img src="imagens/alura-logo-placeholder.png" alt="Logo ToonsVille" class="header-logo">
+    </div>
+    <!-- Menu Inicio -->
+    <nav class="nav-desktop">
+      <ul class="nav-ul">
+        <li>
+          <a href="./index.html">início</a>
+        </li>
+        <li>
+          <a href="./html/toons.html">toons</a>
+        </li>
+        <li>
+          <a href="./html/time.html">time</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Menu final -->
+
+    <!-- Div contendo a barra de pesquisa e o ícone de avatar. -->
+    <!-- Agrupados para facilitar o posicionamento à direita. -->
+    <div class="header-search-avatar">
+
+      <input type="text" class="header-search" placeholder="Títulos, gêneros..." data-search>
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-icones">
+        <img src="../imagens/avatar-icons/power-girl.jpg" class="header-avatar" alt="Avatar do usuário" data-avatar>
+      </button>
+
+    </div>
+
+  </header>
+  <main>
+    <!-- Modal dos ícones -->
+    <div class="modal fade modal-icones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <ul class="header-icones" data-icones>
+
+          </ul>
         </div>
-        <!-- Menu Inicio -->
-        <nav class="nav-desktop">
-            <ul class="nav-ul">
-                <li>
-                    <a href="./index.html">início</a>
-                </li>
-                <li>
-                    <a href="./html/toons.html">toons</a>
-                </li>
-                <li>
-                    <a href="./html/time.html">time</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- Menu final -->
+      </div>
+    </div>
+    <!-- Fim do modal dos ícones -->
 
-        <!-- Div contendo a barra de pesquisa e o ícone de avatar. -->
-        <!-- Agrupados para facilitar o posicionamento à direita. -->
-        <div class="header-search-avatar">
-
-            <input type="text" class="header-search" placeholder="Títulos, gêneros..." data-search>
-
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-icones">
-                <img src="../imagens/avatar-icons/power-girl.jpg" class="header-avatar" alt="Avatar do usuário" data-avatar>
-            </button>
-
-        </div>
-
-    </header>
-    <main>
-        <!-- Modal dos ícones -->
-        <div class="modal fade modal-icones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <ul class="header-icones" data-icones>
-
-                    </ul>
-                </div>
+    <!-- Inicio Carousel contendo os 3 destaques-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators my-4">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="./imagens/7monstrinhos-1024x517.jpg" alt="Primeiro Slide">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-container">
+              <h1>Testando Destaque Slide 1</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
+                eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
+                quod unde odit.</p>
             </div>
+          </div>
         </div>
-        <!-- Fim do modal dos ícones -->
-
-        <!-- Inicio Carousel contendo os 3 destaques-->
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators my-4">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-              </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="./imagens/7monstrinhos-1024x517.jpg" alt="Primeiro Slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <div class = "caption-container">
-                        <h1>Testando Destaque Slide 1</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
-                            eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
-                            quod unde odit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./imagens/SuperPoderosas-1024x517.jpg" alt="Segundo Slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <div class = "caption-container">
-                        <h1>Testando Destaque Slide 2</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
-                            eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
-                            quod unde odit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./imagens/jetsons-1024x517.jpg" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <div class = "caption-container">
-                        <h1>Testando Destaque Slide 3</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
-                            eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
-                            quod unde odit.</p>
-                    </div>
-                    </div>
-                </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./imagens/SuperPoderosas-1024x517.jpg" alt="Segundo Slide">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-container">
+              <h1>Testando Destaque Slide 2</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
+                eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
+                quod unde odit.</p>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./imagens/jetsons-1024x517.jpg" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="caption-container">
+              <h1>Testando Destaque Slide 3</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus atque tenetur illo accusamus
+                eum! Excepturi culpa eveniet amet cumque ratione cum, numquam aperiam ullam at voluptas quas
+                quod unde odit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+
+    <!-- Final Carousel -->
+
+    <!-- Jumbotrom inicio -->
+
+    <div class="jumbotron m-0 " id="loading">
+      <h1 class="display-4 text d-flex justify-content-center font-weight-bold">
+        Top destaques </h1>
+      <hr class="my-4" />
+
+      <div class="container response">
+        <div class="d-flex justify-content-between">
+          <div class="row container d-flex justify-content-around p-0">
+            <div class="ml-5">
+              <div class="col-md-12 d-flex justify-content-center">
+                <div class="col-md-9">
+                  <h5 class="text-justify impacto paragrafo">
+                    Sessão Nostalgia, não de alguém especifico mas sim de coisas antigas, como a vida de infância, que a
+                    unica preocupação que se tinha era se o seu "desenho animado preferido" ira passar na tevê.
+                  </h5>
+                </div>
+              </div>
+              <hr class="my-4" />
+            </div>
+            <div class="col-md-12 d-flex justify-content-center">
+              <div class="col-md-9">
+                <h1 class="text-center">
+                  Top Destaques Anos 80
+                </h1>
+              </div>
+            </div>
+            
+            <!--Cards circulares Inicio-->
+
+            <div class="col-md-12 p-0">
+              <div class="d-flex justify-content-between mt-4 mb-4 materiais">
+                <div>
+                  <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/destaque1.jpg" alt="" />
+                  <div class="text-center font-weight-bold">The Mertunes</div>
+                </div>
+                <div>
+                  <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/destaques2.jpg"
+                    alt="" />
+                  <div class="text-center font-weight-bold">Josie and the Pussycats</div>
+                </div>
+                <div>
+                  <img class="destaques inline img-fluid rounded-circle ml-2" src="imagens/Destaques/destaques3.jpg"
+                    alt="" />
+                  <div class="text-center font-weight-bold">Pink and The Brain</div>
+                </div>
+                <div>
+                  <img class="img-fluid rounded-circle" src="imagens/Destaques/destaque4.jpg" alt="" />
+                  <div class="text-center font-weight-bold">Pantera cor de rosa</div>
+                </div>
+                <div>
+                  <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/destaques5.jpg"
+                    alt="" />
+                  <div class="text-center font-weight-bold">Capitão Caverna</div>
+                </div>
+              </div>
+              <!-- inicio cards anos 80 -->
+              <hr class="my-4" />
+            </div>
+            <hr />
+            <div class="col-md-12 d-flex justify-content-center">
+              <div class="col-md-9">
+                <h1 class="text-center">
+                  Top Destaques Anos 80
+                </h1>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <!-- Final Carousel -->
+        <div class="col-md-12 p-0">
+          <div class="d-flex justify-content-between mt-4 mb-4 materiais">
+            <div>
+              <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/anos80.jpg" alt="" />
+              <div class="text-center font-weight-bold">Thundercats</div>
+            </div>
+            <div>
+              <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/anos80.card2.jpg" alt="" />
+              <div class="text-center font-weight-bold">He Man</div>
+            </div>
+            <div>
+              <img class="destaques inline img-fluid rounded-circle ml-2" src="imagens/Destaques/anos80.card3.jpg"
+                alt="" />
+              <div class="text-center font-weight-bold">Caverna do Dragão</div>
+            </div>
+            <div>
+              <img class="img-fluid rounded-circle" src="imagens/Destaques/anos80.card4.jpg" alt="" />
+              <div class="text-center font-weight-bold">Ursinhos Gummi</div>
+            </div>
+            <div>
+              <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/anos80.card5.jpg" alt="" />
+              <div class="text-center font-weight-bold">Tiny Toon</div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="col-md-12 d-flex justify-content-center">
+          <div class="col-md-9">
+            <h1 class="text-center">
+              Top Destaques Anos 90
+            </h1>
+          </div>
+        </div>
 
-              <!-- Jumbotrom inicio -->
+        <!--Cards circulares Inicio-->
 
-              <div class="jumbotron m-0 " id="loading">
-                <h1 class="display-4 text d-flex justify-content-center digitar typing-animation-impacto impacto fi font-weight-bold">
-                    Top destaques.</h1>
-                <hr class="my-4" />
-              
-                <div class="container response">
-                  <div class="d-flex justify-content-between">
-                    <div class="row container d-flex justify-content-around p-0">
-                      <div class="ml-5">
-                        <div class="col-md-12 d-flex justify-content-center">
-                          <div class="col-md-9">
-                            <h5 class="text-justify impacto paragrafo">
-                                Sessão Nostalgia, não de alguém especifico mas sim de coisas antigas, como a vida de infância, que a unica preocupação que se tinha era se o seu "desenho animado preferido" ira passar na tevê.
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                      <hr class="my-4" />
-                      <!--Cards circulares Inicio-->
-                      
-                     <div class="col-md-12 p-0">
-                        <div class="d-flex justify-content-between mt-4 mb-4 materiais">
-                          <div>
-                            <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/destaque1.jpg"
-                              alt="" />
-                            <div class="text-center font-weight-bold">The Mertunes</div>
-                          </div>
-                          <div>
-                            <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/destaques2.jpg"
-                              alt="" />
-                            <div class="text-center font-weight-bold">Josie and the Pussycats</div>
-                          </div>
-                          <div>
-                            <img class="destaques inline img-fluid rounded-circle ml-2" src="imagens/Destaques/destaques3.jpg" alt="" />
-                            <div class="text-center font-weight-bold">Pink and The Brain</div>
-                          </div>
-                          <div>
-                            <img class="img-fluid rounded-circle" src="imagens/Destaques/destaque4.jpg"
-                              alt="" />
-                            <div class="text-center font-weight-bold">Pantera cor de rosa</div>
-                          </div>
-                          <div>
-                            <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/destaques5.jpg"
-                              alt="" />
-                            <div class="text-center font-weight-bold">Capitão Caverna</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-    
-    
-            <!--Jumbotrom final  -->
-        
-    </main>
-    <footer>
-        <p>Site desenvolvido pelo <a href="html/time.html">squad 05</a> durante o Hackathon da <a href="https://www.fcamara.com.br/" target="_blank">Fcamara</a>. <a href="https://github.com/GuilhermeAlex/Projeto_Fcamara" target="_blank"><img src="imagens/github-256x256.png" class="icone-github" alt="Ìcone do github que ao ser clicado leva à página do projeto no github."></a></p>
-    </footer>
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+        <div class="col-md-12 p-0">
+          <div class="d-flex justify-content-between mt-4 mb-4 materiais">
+            <div>
+              <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/anos90.card1.jpg" alt="" />
+              <div class="text-center font-weight-bold">Pingo</div>
+            </div>
+            <div>
+              <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/anos90.card2.jpg" alt="" />
+              <div class="text-center font-weight-bold">Heym Arnold</div>
+            </div>
+            <div>
+              <img class="destaques inline img-fluid rounded-circle ml-2" src="imagens/Destaques/anos90.card3.jpg"
+                alt="" />
+              <div class="text-center font-weight-bold">Doug Funnie</div>
+            </div>
+            <div>
+              <img class="img-fluid rounded-circle" src="imagens/Destaques/anos90.card4.jpg" alt="" />
+              <div class="text-center font-weight-bold">The Thornberrys</div>
+            </div>
+            <div>
+              <img class="destaques inline img-fluid rounded-circle" src="imagens/Destaques/anos90.card5.jpg" alt="" />
+              <div class="text-center font-weight-bold">As Aventuras de Babar</div>
+            </div>
+          </div>
+          <!-- inicio cards anos 80 -->
+          <hr class="my-4" />
+        </div>
+
+
+
+        <!--Jumbotrom final  -->
+
+  </main>
+  <footer>
+    <p>Site desenvolvido pelo <a href="html/time.html">squad 05</a> durante o Hackathon da <a
+        href="https://www.fcamara.com.br/" target="_blank">Fcamara</a>. <a
+        href="https://github.com/GuilhermeAlex/Projeto_Fcamara" target="_blank"><img src="imagens/github-256x256.png"
+          class="icone-github" alt="Ìcone do github que ao ser clicado leva à página do projeto no github."></a></p>
+  </footer>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
