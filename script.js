@@ -111,16 +111,6 @@ if (window.location.pathname == "/index.html")
 
 // Coloca o display da janela de escolha de avatares como "none" e adiciona uma função ao avatar para que ao ser clicado mude o display da janela de icones
 
-divIcones.style.display = "none"
-avatar.addEventListener('click', () => {
-    if (divIcones.style.display == "none"){
-        divIcones.style.display = "grid"
-    } else {
-        divIcones.style.display = "none"
-    }
-})
-
-
 atualizarIcones()
 // gera a lista de avatares disponíveis com base nos avatares registrados na lista icones
 function atualizarIcones() {
