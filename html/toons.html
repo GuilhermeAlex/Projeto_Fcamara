@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toons</title>
     <link rel="shortcut icon" href="../imagens/favicon-placeholder.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <header class="header-desktop">
 
@@ -39,400 +45,497 @@
         <div class="header-search-avatar">
 
             <input type="text" class="header-search" placeholder="Títulos, gêneros..." data-search>
-            
+
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-icones">
-                <img src="../imagens/avatar-icons/power-girl.jpg" class="header-avatar" alt="Avatar do usuário" data-avatar>
+                <img src="../imagens/avatar-icons/power-girl.jpg" class="header-avatar" alt="Avatar do usuário"
+                    data-avatar>
             </button>
-            
+
 
         </div>
     </header>
     <main class="toons">
-        <!-- Modal dos ícones -->
-        <div class="modal fade modal-icones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <ul class="header-icones" data-icones>
 
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Fim do modal dos ícones -->
 
         <div class="desenhos">
             <h2 data-h2-acessados>Acessados recentemente</h2>
-            <section class="grid-mais-procurados" data-acessados>
-
-            </section>
+            <div class="list-container">
+                <section class="catalogo" data-acessados data-lista-desenhos>
+                
+                </section>
+                <i class="fas fa-chevron-right arrow arrow-right" data-arrow-right></i>
+                <i class="fas fa-chevron-left arrow arrow-left" data-arrow-left></i>
+            </div>
             <h2 data-desenhos>Catálogo</h2>
             <!-- Grid contendo 9 desenhos -->
-            <section class="grid-mais-procurados">
-                
-                <!-- Os sete monstrinhos -->
-                <div class="item" data-nome="os sete monstrinhos" data-genero="comédia" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-os-sete-monstrinhos">
-                        <img src="../imagens/7monstrinhos-1024x517.jpg" alt="Capa do desenho 'Os sete monstrinhos'." class="toons-desenhos">
+            <div class="list-container">
+                <section class="catalogo" data-catalogo data-lista-desenhos>
+                    <!-- Os sete monstrinhos -->
+                    <div class="item" data-desenho data-nome="os sete monstrinhos" data-genero="comédia"
+                        onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target=".modal-os-sete-monstrinhos">
+                            <img src="../imagens/7monstrinhos-1024x517.jpg" alt="Capa do desenho 'Os sete monstrinhos'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Os Jetsons -->
+                    <div class="item" data-desenho data-nome="os jetsons" data-genero="comédia" onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-os-jetsons">
+                            <img src="../imagens/jetsons-1024x517.jpg" alt="Capa do desenho 'Os Jetsons'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- As meninas superpoderosas -->
+                    <div class="item" data-desenho data-nome="as meninas super poderosas" data-genero="comédia"
+                        onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target=".modal-as-meninas-super-poderosas">
+                            <img src="../imagens/SuperPoderosas-1024x517.jpg"
+                                alt="Capa do desenho 'As meninas superpoderosas'." class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Fim As meninas superpoderosas -->
+                    <!-- Caillou -->
+                    <div class="item" data-desenho data-nome="caillou" data-genero="educativo" onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-caillou">
+                            <img src="../imagens/catalogo/cailllou-640x360.jpg" alt="Capa do desenho 'Caillou'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Scooby Doo -->
+                    <div class="item" data-desenho data-nome="scooby doo" data-genero="comédia" onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-scooby-doo">
+                            <img src="../imagens/catalogo/scooby-doo-640x360.jpg" alt="Capa do desenho 'Scooby-doo'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Os Flintstones -->
+                    <div class="item" data-desenho data-nome="os flintstones" data-genero="comédia" onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target=".modal-os-flintstones">
+                            <img src="../imagens/catalogo/flintstones-640x360.jpg" alt="Capa do desenho 'Os Flintstones'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Samurai Jack -->
+                    <div class="item" data-desenho data-nome="samurai jack" data-genero="ação e aventura"
+                        onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-samurai-jack">
+                            <img src="../imagens/catalogo/samurai-jack-640x360.jpg" alt="Capa do desenho 'Samurai Jack'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Coragem, o cão covarde -->
+                    <div class="item" data-desenho data-nome="coragem o cão covarde" data-genero="comédia"
+                        onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-coragem">
+                            <img src="../imagens/catalogo/coragem-o-cao-covarde-640x360.jpg"
+                                alt="Capa do desenho 'Coragem, o cão covarde'." class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Hey Arnold -->
+                    <div class="item" data-desenho data-nome="hey arnold" data-genero="comédia" onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-arnold">
+                            <img src="../imagens/catalogo/hey-arnold-640x360.jpg" alt="Capa do desenho 'Hey Arnold'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Avatar -->
+                    <div class="item" data-desenho data-nome="avatar" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-avatar">
+                            <img src="../imagens/catalogo/avatar-640x360.jpg" alt="Capa do desenho 'Avatar'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Ben10 -->
+                    <div class="item" data-desenho data-nome="ben10" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-ben10">
+                            <img src="../imagens/catalogo/ben-10-640x360.jpg" alt="Capa do desenho 'Ben10'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Capitão Caverna -->
+                    <div class="item" data-desenho data-nome="capitão caverna" data-genero="ação e aventura"
+                        onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target=".modal-capitao-caverna">
+                            <img src="../imagens/catalogo/capitao-caverna-640x360.jpg"
+                                alt="Capa do desenho 'Capitão Caverna'." class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Cavaleiros do zodíaco -->
+                    <div class="item" data-desenho data-nome="cavaleiros do zodíaco" data-genero="ação e aventura"
+                        onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target=".modal-cavaleiros-do-zodiaco">
+                            <img src="../imagens/catalogo/cavaleiros-do-zodiaco-640x360.jpg"
+                                alt="Capa do desenho 'Cavaleiros do zodíaco'." class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Caverna do dragão -->
+                    <div class="item" data-desenho data-nome="caverna do dragão" data-genero="ação e aventura"
+                        onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target=".modal-caverna-do-dragao">
+                            <img src="../imagens/catalogo/caverna-do-dragao-640x360.jpg"
+                                alt="Capa do desenho 'Caverna do dragão'." class="toons-desenhos">
+                        </button>
+                    </div>
+                    <!-- Dragon ball -->
+                    <div class="item" data-desenho data-nome="dragon ball" data-genero="ação e aventura"
+                        onclick="adicionaInteresse(this)">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-dragon-ball">
+                            <img src="../imagens/catalogo/dragon-ball-640x360.jpg" alt="Capa do desenho 'Dragon ball'."
+                                class="toons-desenhos">
+                        </button>
+                    </div>
+                </section>
+                <i class="fas fa-chevron-right arrow arrow-right" data-arrow-right></i>
+                <i class="fas fa-chevron-left arrow arrow-left" data-arrow-left></i>
+            </div>
 
-                    </button>
-                </div>
-                <div class="modal fade modal-os-sete-monstrinhos" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <!-- Modals -->
+            <div>
+                <!-- Ìcones -->
+                <div class="modal fade modal-icones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Os sete monstrinhos</h1>
-                                <p> <p>Gênero: Fantasia/Comédia</p>
-                                    <p>Criador: Maurice Sendak</p>
-                                    <p>Ano de Lançamento: 2000</p>
-                                    <p>Sinopse: O cotidiano de uma divertida família cujos sete irmãos estão sob os cuidados da mãe o tempo todo. Cada um deles tem diferentes feições monstruosas e divertidas personalidades. Eles enfrentam os desafios da infância e ajudam uns aos outros.</p>
-                                    <p>Duração dos episódios: 25min</p>
-                                    <p>Número de Temporadas: 2 temporadas</p>
-                                    <p>Onde ver: Sábado, às 11h30 e domingo, às 13h55, na TV Cultura!</p>
-                                    </p>
+                            <ul class="header-icones" data-icones>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Os sete monstrinhos-->
+                <div class="modal fade modal-os-sete-monstrinhos" tabindex="-1" role="dialog"
+                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <h1>Os sete monstrinhos</h1>
+                            <p>
+                            <p>Gênero: Fantasia/Comédia</p>
+                            <p>Criador: Maurice Sendak</p>
+                            <p>Ano de Lançamento: 2000</p>
+                            <p>Sinopse: O cotidiano de uma divertida família cujos sete irmãos estão sob os cuidados
+                                da mãe o tempo todo. Cada um deles tem diferentes feições monstruosas e divertidas
+                                personalidades. Eles enfrentam os desafios da infância e ajudam uns aos outros.</p>
+                            <p>Duração dos episódios: 25min</p>
+                            <p>Número de Temporadas: 2 temporadas</p>
+                            <p>Onde ver: Sábado, às 11h30 e domingo, às 13h55, na TV Cultura!</p>
+                            </p>
 
                         </div>
                     </div>
                 </div>
-                <!-- Fim Os sete monstrinhos -->
-                
+
                 <!-- Os Jetsons -->
-                <div class="item" data-nome="os jetsons" data-genero="comédia" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-os-jetsons">
-                        <img src="../imagens/jetsons-1024x517.jpg" alt="Capa do desenho 'Os Jetsons'." class="toons-desenhos">
-
-                    </button>
-                </div>
-                <div class="modal fade modal-os-jetsons" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal fade modal-os-jetsons" tabindex="-1" role="dialog"
+                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Os Jetsons</h1>
-                                <p> <p>Gênero: Ficção Científica/Comédia</p>
-                                    <p>Criador: Joseph Barbera, William Hanna</p>
-                                    <p>Ano de Lançamento: 1962</p>
-                                    <p>Sinopse: George Jetson, sua esposa Jane e seus filhos Elroy e Judy vivem em um futuro automatizado, mas isso não facilita a vida dessa família que se envolve em várias confusões.</p>
-                                    <p>Duração dos episódios: 22min<br>
-                                    <p>Número de Temporadas: 3 temporadas</p>
-                                    <p>Onde ver: Todos os dias da semana, às 16h51 e, às 4h55 da manhã na Tooncast!E em breve estará disponível na HBO MAX BRASIL.</p>
-                                    </p>
+                            <h1>Os Jetsons</h1>
+                            <p>
+                            <p>Gênero: Ficção Científica/Comédia</p>
+                            <p>Criador: Joseph Barbera, William Hanna</p>
+                            <p>Ano de Lançamento: 1962</p>
+                            <p>Sinopse: George Jetson, sua esposa Jane e seus filhos Elroy e Judy vivem em um futuro
+                                automatizado, mas isso não facilita a vida dessa família que se envolve em várias
+                                confusões.</p>
+                            <p>Duração dos episódios: 22min<br>
+                            <p>Número de Temporadas: 3 temporadas</p>
+                            <p>Onde ver: Todos os dias da semana, às 16h51 e, às 4h55 da manhã na Tooncast!E em
+                                breve
+                                estará disponível na HBO MAX BRASIL.</p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Os Jetsons -->
-                
-                <!-- As meninas superpoderosas -->
-                <div class="item" data-nome="as meninas super poderosas" data-genero="comédia" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-as-meninas-super-poderosas">
-                        <img src="../imagens/SuperPoderosas-1024x517.jpg" alt="Capa do desenho 'As meninas superpoderosas'." class="toons-desenhos">
 
-                    </button>
-                </div>
-                <div class="modal fade modal-as-meninas-super-poderosas" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!-- As meninas super poderosas -->
+                <div class="modal fade modal-as-meninas-super-poderosas" tabindex="-1" role="dialog"
+                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>As meninas super poderosas</h1>
-                                <p> <p>Gênero: Ação e Aventura/Comédia</p>
-                                    <p>Criador: Craig McCracken</p>
-                                    <p>Ano de Lançamento: 1998</p>
-                                    <p>Sinopse: Açúcar, tempero e tudo que há de bom, estes foram os ingredientes escolhidos para criar as garotinhas perfeitas. Mas o professor Utônio, acidentalmente, acrescentou um ingrediente extra na mistura: O elemento X!. E assim nasceram as meninas Superpoderosas, usando seus ultra-super poderes Florzinha, Lindinha e Docinho, têm dedicado suas vidas combatendo o crime, e as forças do mal!</p>
-                                    <p>Duração dos episódios: 22min</p>
-                                    <p>Número de Temporadas: 7 temporadas</p>
-                                    <p>Onde ver: Todos os dias da semana, na Cartoon Network e, na Tooncast!E em breve estará disponível na HBO MAX BRASIL.</p>
-                                    </p>
+                            <h1>As meninas super poderosas</h1>
+                            <p>
+                            <p>Gênero: Ação e Aventura/Comédia</p>
+                            <p>Criador: Craig McCracken</p>
+                            <p>Ano de Lançamento: 1998</p>
+                            <p>Sinopse: Açúcar, tempero e tudo que há de bom, estes foram os ingredientes escolhidos
+                                para criar as garotinhas perfeitas. Mas o professor Utônio, acidentalmente,
+                                acrescentou
+                                um ingrediente extra na mistura: O elemento X!. E assim nasceram as meninas
+                                Superpoderosas, usando seus ultra-super poderes Florzinha, Lindinha e Docinho, têm
+                                dedicado suas vidas combatendo o crime, e as forças do mal!</p>
+                            <p>Duração dos episódios: 22min</p>
+                            <p>Número de Temporadas: 7 temporadas</p>
+                            <p>Onde ver: Todos os dias da semana, na Cartoon Network e, na Tooncast!E em breve
+                                estará
+                                disponível na HBO MAX BRASIL.</p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim As meninas superpoderosas -->
 
                 <!-- Caillou -->
-                <div class="item" data-nome="caillou" data-genero="educativo" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-caillou">
-                        <img src="../imagens/catalogo/cailllou-640x360.jpg" alt="Capa do desenho 'Caillou'." class="toons-desenhos">
-
-                    </button>
-                </div>
-                <div class="modal fade modal-caillou" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal fade modal-caillou" tabindex="-1" role="dialog"
+                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Caillou</h1>
-                                <p> <p>Gênero: Aventura/Educativo</p>
-                                    <p>Criador: Hélène Desputeaux, Christine L'Heureux</p>
-                                    <p>Ano de Lançamento: 1997</p>
-                                    <p>Sinopse: O desenho conta as aventuras de um menino curioso de quatro anos que tem amigos imaginários, pratica esportes e explora a natureza.</p>
-                                    <p>Duração dos episódios: 22min</p>
-                                    <p>Número de Temporadas: 5 temporadas</p>
-                                    <p>Onde ver: Disponível na Netflix Brasil.</p>
-                                    </p>
+                            <h1>Caillou</h1>
+                            <p>
+                            <p>Gênero: Aventura/Educativo</p>
+                            <p>Criador: Hélène Desputeaux, Christine L'Heureux</p>
+                            <p>Ano de Lançamento: 1997</p>
+                            <p>Sinopse: O desenho conta as aventuras de um menino curioso de quatro anos que tem
+                                amigos
+                                imaginários, pratica esportes e explora a natureza.</p>
+                            <p>Duração dos episódios: 22min</p>
+                            <p>Número de Temporadas: 5 temporadas</p>
+                            <p>Onde ver: Disponível na Netflix Brasil.</p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Caillou -->
-                
+
                 <!-- Scooby Doo -->
-                <div class="item" data-nome="scooby doo" data-genero="comédia" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-scooby-doo">
-                        <img src="../imagens/catalogo/scooby-doo-640x360.jpg" alt="Capa do desenho 'Scooby-doo'." class="toons-desenhos">
-
-                    </button>
-                </div>
-                <div class="modal fade modal-scooby-doo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal fade modal-scooby-doo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Scooby-Doo!</h1>
-                                <p> <p>Gênero: Ação e Aventura/Mistério/Comédia</p>
-                                    <p>Criador: Joe Ruby,Ken Spears</p>
-                                    <p>Ano de Lançamento: 1969</p>
-                                    <p>Sinopse: Uma série que segue os muitos mistérios da Mystery Gang, que consiste de Fred, Daphne, Velma, Salsicha e Scooby. Juntos, eles viajam ao redor do mundo, sempre em busca de um mistério a ser resolvido.</p>
-                                    <p>Duração dos episódios: 23min</p>
-                                    <p>Número de Temporadas: 2 temporadas</p>
-                                    <p>Onde ver:</p>
-                                    </p>
+                            <h1>Scooby-Doo!</h1>
+                            <p>
+                            <p>Gênero: Ação e Aventura/Mistério/Comédia</p>
+                            <p>Criador: Joe Ruby,Ken Spears</p>
+                            <p>Ano de Lançamento: 1969</p>
+                            <p>Sinopse: Uma série que segue os muitos mistérios da Mystery Gang, que consiste de Fred,
+                                Daphne, Velma, Salsicha e Scooby. Juntos, eles viajam ao redor do mundo, sempre em busca
+                                de um mistério a ser resolvido.</p>
+                            <p>Duração dos episódios: 23min</p>
+                            <p>Número de Temporadas: 2 temporadas</p>
+                            <p>Onde ver:</p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Scooby Doo -->
 
                 <!-- Os Flintstones -->
-                <div class="item" data-nome="os flintstones" data-genero="comédia" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-os-flintstones">
-                        <img src="../imagens/catalogo/flintstones-640x360.jpg" alt="Capa do desenho 'Os Flintstones'." class="toons-desenhos">
-
-                    </button>
-                </div>
-                <div class="modal fade modal-os-flintstones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal fade modal-os-flintstones" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Os Flintstones</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Os Flintstones</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Os Flintstones -->
 
                 <!-- Samurai Jack -->
-                <div class="item" data-nome="samurai jack" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-samurai-jack">
-                        <img src="../imagens/catalogo/samurai-jack-640x360.jpg" alt="Capa do desenho 'Samurai Jack'." class="toons-desenhos">
-
-                    </button>
-                </div>
-                <div class="modal fade modal-samurai-jack" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal fade modal-samurai-jack" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Samurai Jack</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Samurai Jack</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Samurai Jack -->
 
-                <!-- Coragem, o cão covarde -->
-                <div class="item" data-nome="coragem o cão covarde" data-genero="comédia" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-coragem">
-                        <img src="../imagens/catalogo/coragem-o-cao-covarde-640x360.jpg" alt="Capa do desenho 'Coragem, o cão covarde'." class="toons-desenhos">
-                    </button>
-                </div>
-                <div class="modal fade modal-coragem" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!-- Coragem o cão covarde -->
+                <div class="modal fade modal-coragem" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Coragem, o cão covarde</h1>
-                                <p> <p>Gênero: </p>
-                                    <p>Criador: </p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Coragem, o cão covarde</h1>
+                            <p>
+                            <p>Gênero: </p>
+                            <p>Criador: </p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Coragem, o cão covarde -->
-                
-                <!-- Hey Arnold --> 
-                <div class="item" data-nome="hey arnold" data-genero="comédia" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-arnold">
-                        <img src="../imagens/catalogo/hey-arnold-640x360.jpg" alt="Capa do desenho 'Hey Arnold'." class="toons-desenhos">
-                    </button>
-                </div>
-                <div class="modal fade modal-arnold" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+                <!-- Hey Arnold -->
+                <div class="modal fade modal-arnold" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Hey Arnold</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Hey Arnold</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Hey Arnold -->
 
-                <!-- Avatar --> 
-                <div class="item" data-nome="avatar" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-avatar">
-                        <img src="../imagens/catalogo/avatar-640x360.jpg" alt="Capa do desenho 'Avatar'." class="toons-desenhos">
-                    </button>
-                </div>
-                <div class="modal fade modal-avatar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!-- Avatar -->
+                <div class="modal fade modal-avatar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Avatar</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Avatar</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Avatar -->
 
-                <!-- Ben10 --> 
-                <div class="item" data-nome="ben10" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-ben10">
-                        <img src="../imagens/catalogo/ben-10-640x360.jpg" alt="Capa do desenho 'Ben10'." class="toons-desenhos">
-                    </button>
-                </div>
-                <div class="modal fade modal-ben10" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!-- Ben 10 -->
+                <div class="modal fade modal-ben10" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Ben10</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Ben10</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Ben10 -->
 
-                <!-- Capitão Caverna --> 
-                <div class="item" data-nome="capitão caverna" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-capitao-caverna">
-                        <img src="../imagens/catalogo/capitao-caverna-640x360.jpg" alt="Capa do desenho 'Capitão Caverna'." class="toons-desenhos">
-                    </button>
-                </div>
-                <div class="modal fade modal-capitao-caverna" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!-- Capitão Caverna -->
+                <div class="modal fade modal-capitao-caverna" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Capitão Caverna</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Capitão Caverna</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Capitão Caverna -->
 
-                <!-- Cavaleiros do zodíaco --> 
-                <div class="item" data-nome="cavaleiros do zodíaco" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-cavaleiros-do-zodiaco">
-                        <img src="../imagens/catalogo/cavaleiros-do-zodiaco-640x360.jpg" alt="Capa do desenho 'Cavaleiros do zodíaco'." class="toons-desenhos">
-                    </button>
-                </div>
-                <div class="modal fade modal-cavaleiros-do-zodiaco" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!-- Cavaleiros do Zodíaco -->
+                <div class="modal fade modal-cavaleiros-do-zodiaco" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Cavaleiros do zodíaco</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Cavaleiros do zodíaco</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Cavaleiros do zodíaco -->
 
-                <!-- Caverna do dragão --> 
-                <div class="item" data-nome="caverna do dragão" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-caverna-do-dragao">
-                        <img src="../imagens/catalogo/caverna-do-dragao-640x360.jpg" alt="Capa do desenho 'Caverna do dragão'." class="toons-desenhos">
-                    </button>
-                </div>
-                <div class="modal fade modal-caverna-do-dragao" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!-- Caverna do dragão -->
+                <div class="modal fade modal-caverna-do-dragao" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Caverna do dragão</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Caverna do dragão</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Caverna do dragão -->
 
-                <!-- Dragon ball --> 
-                <div class="item" data-nome="dragon ball" data-genero="ação e aventura" onclick="adicionaInteresse(this)">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-dragon-ball">
-                        <img src="../imagens/catalogo/dragon-ball-640x360.jpg" alt="Capa do desenho 'Dragon ball'." class="toons-desenhos">
-                    </button>
-                </div>
-                <div class="modal fade modal-dragon-ball" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!-- Dragon Ball -->
+                <div class="modal fade modal-dragon-ball" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                                <h1>Dragon ball</h1>
-                                <p> <p>Gênero:</p>
-                                    <p>Criador:</p>
-                                    <p>Ano de Lançamento:</p>
-                                    <p>Sinopse:</p>
-                                    <p>Duração dos episódios:</p>
-                                    <p>Número de Temporadas:</p>
-                                    <p>Onde ver: </p>
-                                    </p>
+                            <h1>Dragon ball</h1>
+                            <p>
+                            <p>Gênero:</p>
+                            <p>Criador:</p>
+                            <p>Ano de Lançamento:</p>
+                            <p>Sinopse:</p>
+                            <p>Duração dos episódios:</p>
+                            <p>Número de Temporadas:</p>
+                            <p>Onde ver: </p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Fim Dragon ball -->
 
-            </section>
+
+            </div>
+
         </div>
-    </main> 
+    </main>
     <footer>
-        <p>Site desenvolvido pelo <a href="html/time.html">squad 05</a> durante o Hackathon da <a href="https://www.fcamara.com.br/" target="_blank">Fcamara</a>. <a href="https://github.com/GuilhermeAlex/Projeto_Fcamara" target="_blank"><img src="../imagens/github-256x256.png" class="icone-github" alt="Ìcone do github que ao ser clicado leva à página do projeto no github."></a></p>
+        <p>Site desenvolvido pelo <a href="html/time.html">squad 05</a> durante o Hackathon da <a
+                href="https://www.fcamara.com.br/" target="_blank">Fcamara</a>. <a
+                href="https://github.com/GuilhermeAlex/Projeto_Fcamara" target="_blank"><img
+                    src="../imagens/github-256x256.png" class="icone-github"
+                    alt="Ìcone do github que ao ser clicado leva à página do projeto no github."></a></p>
     </footer>
     <!-- JavaScript -->
     <script src="../script.js"></script>
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
