@@ -222,6 +222,7 @@ function adicionaInteresse(element) {
 // ==== Fim acessados recentemente ====
 
 window.localStorage.setItem("pesquisa", "")
+
 //=======Função de modo noturno ====
 var icon = document.getElementById("icon");
 icon.onclick = function(){
