@@ -4,7 +4,7 @@ const input = document.querySelector("[data-search]")
 const pathPaginaToons = "/html/toons.html"
 
 // Como o mesmo script está sendo usado para mais de uma página, esse if declara as váriaveis da página toons apenas se o script for chamado a partir dela.
-if (window.location.pathname == pathPaginaToons) {
+if (window.location.pathname.endsWith(pathPaginaToons)) {
     var h2Catalogo = document.querySelector("[data-desenhos]")
     var h2Acessados = document.querySelector("[data-h2-acessados]")
     var listaAcessados = document.querySelector("[data-acessados-recentemente]")
@@ -38,7 +38,7 @@ input.addEventListener('keyup', pesquisar)
 
 function pesquisar(event) {
     // Verifica se o usuário se encontra na página do catalógo, caso não se encontre, encaminha para ela.
-    if (window.location.pathname != pathPaginaToons) {
+    if (window.location.pathname.endsWith(pathPaginaToons) == false) {
         window.localStorage.setItem("pesquisa", event.key)
         return window.location.pathname = pathPaginaToons
     }
@@ -86,17 +86,17 @@ const avatar = document.querySelector("[data-avatar]")
 const divIcones = document.querySelector(["[data-icones]"])
 
 // Verifica se o script está sendo acessado a partir da página index, pois o caminho para as imagens a partir dela é diferente.
-if (window.location.pathname == "/index.html") {
-    var icones = ["/imagens/avatar-icons/default-avatar.png", "/imagens/avatar-icons/power-girl.jpg", "/imagens/avatar-icons/arnold.jpg", "/imagens/avatar-icons/coragem.jpg"]
+if (window.location.pathname.endsWith("/index.html")) {
+    var icones = ["imagens/avatar-icons/default-avatar.png", "imagens/avatar-icons/power-girl.jpg", "imagens/avatar-icons/arnold.jpg", "imagens/avatar-icons/coragem.jpg"]
     if (window.localStorage.getItem("avatar") != null) {
         const avatarPessoal = window.localStorage.getItem("avatar")
-        avatar.src = ".." + avatarPessoal
+        avatar.src = avatarPessoal
     }
 } else {
     var icones = ["../imagens/avatar-icons/default-avatar.png", "../imagens/avatar-icons/power-girl.jpg", "../imagens/avatar-icons/arnold.jpg", "../imagens/avatar-icons/coragem.jpg"]
     if (window.localStorage.getItem("avatar") != null) {
         const avatarPessoal = window.localStorage.getItem("avatar")
-        avatar.src = avatarPessoal
+        avatar.src = "../" + avatarPessoal
     }
 }
 
@@ -124,7 +124,7 @@ function trocarAvatar(element) {
     var temp = element.src
     element = avatar.src
     avatar.src = temp
-    window.localStorage.setItem("avatar", avatar.src.slice(avatar.src.indexOf("/imagens")))
+    window.localStorage.setItem("avatar", avatar.src.slice(avatar.src.indexOf("imagens")))
 }
 
 // ==== Fim do sistema de troca de avatar ====
@@ -132,7 +132,7 @@ function trocarAvatar(element) {
 // ==== Acessados recentemente ====
 
 // Verifica se a página atual é a página do catálogo
-if (window.location.pathname == pathPaginaToons) {
+if (window.location.pathname.endsWith(pathPaginaToons)) {
     // Verifica se há algum desenho recentemente acessado, se houver carrega eles.
     const acessadosRecente = document.querySelector("[data-acessados]")
     if (window.localStorage.getItem("recentes") != null) {
@@ -183,30 +183,31 @@ function adicionaInteresse(element) {
 // ==== Fim acessados recentemente ====
 
 // ==== Início do mecanismo de carrosel no catálogo 
-let contador = []
-arrowsRight.forEach((arrow, i) => {
-    const itemNumber = listasDesenhos[i].querySelectorAll("img").length
-    console.log("Tamanho da lista: "+itemNumber)
-    contador.push(0)
-    arrow.addEventListener('click', () => {
-        if ((contador[i]) < itemNumber -3){
-            contador[i]++
-            listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.2967}px)`
-        }
+if (window.location.pathname.endsWith(pathPaginaToons)){
+    let contador = []
+    arrowsRight.forEach((arrow, i) => {
+        const itemNumber = listasDesenhos[i].querySelectorAll("img").length
+        console.log("Tamanho da lista: "+itemNumber)
+        contador.push(0)
+        arrow.addEventListener('click', () => {
+            if ((contador[i]) < itemNumber -3){
+                contador[i]++
+                listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.2967}px)`
+            }
+        })
+        
     })
-    
-})
-arrowsLeft.forEach((arrow, i) => {
-    const itemNumber = listasDesenhos[i].querySelectorAll("img").length
-    arrow.addEventListener('click', () => {
-        if ((contador[i]) > 0){
-            contador[i]--
-            listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.2967}px)`
-        }
+    arrowsLeft.forEach((arrow, i) => {
+        const itemNumber = listasDesenhos[i].querySelectorAll("img").length
+        arrow.addEventListener('click', () => {
+            if ((contador[i]) > 0){
+                contador[i]--
+                listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.2967}px)`
+            }
+        })
+        
     })
-    
-})
-
+}
 
 // ==== Fim do mecanismo de carrosel no catálogo ====
 
