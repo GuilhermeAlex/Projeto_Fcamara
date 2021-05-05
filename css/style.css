@@ -8,7 +8,7 @@ body {
     margin: 0;
     font-family: 'Alegreya Sans', monospace;
     letter-spacing: 1px;
-
+   
 }
 /* ==== Início do header ==== */
 .header-desktop{
@@ -131,7 +131,7 @@ body {
 .main-principal {
     display: block;
     position: relative;
-    background-color: var(--primary-color); /*#F7F8F5;*/
+    background-color: #F7F8F5;
     width: 85vw;
     height: 40vh;
     top: 25px;
