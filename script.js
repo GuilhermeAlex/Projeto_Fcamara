@@ -8,9 +8,15 @@ if (window.location.pathname == pathPaginaToons) {
     var h2Desenhos = document.querySelector("[data-desenhos]")
     var h2Acessados = document.querySelector("[data-h2-acessados]")
     var maisAcessados = document.querySelector("[data-acessados]")
-    var desenhosElement = document.querySelector(".desenhos")
-    var desenhosArray = desenhosElement.querySelectorAll(".item")
+    var desenhosElement = document.querySelector("[data-catalogo]")
+    var desenhosArray = document.querySelectorAll("[data-desenho]")
+    var listContainer = document.querySelectorAll(".list-container")
+    var catalogo = document.querySelector("[data-catalogo]")
     var achados = 0
+    var arrowsRight = document.querySelectorAll("[data-arrow-right]")
+    var arrowsLeft = document.querySelectorAll("[data-arrow-left]")
+    var listasDesenhos = document.querySelectorAll("[data-lista-desenhos]")
+
     if (window.localStorage.getItem("pesquisa") != null) {
         if (window.localStorage.getItem("pesquisa").length <= 2) {
             input.value = window.localStorage.getItem("pesquisa")
@@ -39,19 +45,35 @@ function pesquisar(event) {
     const busca = input.value.toUpperCase();
     // Se a caixa de pesquisa tiver vazia ele restaura todos e retorna
     if (input.value == '') {
-        h2Acessados.style.display = "block"
-        maisAcessados.style.display = "grid"
+        h2Acessados.className = ""
+        maisAcessados.className = "catalogo"
+        catalogo.className= "catalogo"
+        listContainer.forEach((list) => {list.className = "list-container"})
+        arrowsLeft.forEach((arrow) => {
+            arrow.className = "fas fa-chevron-left arrow arrow-left"
+        })
+        arrowsRight.forEach((arrow) => {
+            arrow.className = "fas fa-chevron-right arrow arrow-right"
+        })
         h2Desenhos.innerHTML = "Catálogo"
         for (let i = 0; i < desenhosArray.length; i++) {
             const elemento = desenhosArray[i]
-            elemento.style.display = "block"
+            elemento.className = "item"
         }
         return
     }
+    listContainer.forEach((list) => {list.className = "list-container-pesquisa"})
+    catalogo.className = "catalogo-pesquisa"
+    arrowsLeft.forEach((arrow) => {
+        arrow.className = "none"
+    })
+    arrowsRight.forEach((arrow) => {
+        arrow.className = "none"
+    })
     // Restaura todos os desenhos
     for (let i = 0; i < desenhosArray.length; i++) {
         const elemento = desenhosArray[i]
-        elemento.style.display = "block"
+        elemento.className = "item-pesquisa"
         achados++
     }
     // Esconde os que não estão de acordo com a pesquisa
@@ -60,7 +82,7 @@ function pesquisar(event) {
         const nome = elemento.dataset.nome
         const genero = elemento.dataset.genero
         if ((nome.toUpperCase().indexOf(busca) == -1) && (genero.toUpperCase().indexOf(busca) == -1)) {
-            elemento.style.display = "none"
+            elemento.className = "none"
             achados--
         }
     }
@@ -69,12 +91,36 @@ function pesquisar(event) {
     } else {
         h2Desenhos.innerHTML = `Foram encontrados ${achados} desenhos com base na pesquisa "${input.value}"`
     }
-    maisAcessados.style.display = "none"
-    h2Acessados.style.display = "none"
+    maisAcessados.className = "none"
+    h2Acessados.className = "none"
     achados = 0
 }
 
 // ==== Fim mecanismo de busca ====
+
+// ==== Início do mecanismo de carrosel no catálogo 
+console.log(listasDesenhos)
+console.log(arrowsRight)
+
+arrowsRight.forEach((arrow, i) => {
+    const itemNumber = listasDesenhos[i].querySelectorAll(".item").length
+    let contador = 0
+    arrow.addEventListener('click', () => {
+        if ((contador + 2) <= itemNumber){
+            contador++
+            listasDesenhos[i].style.transform = `translateX(calc(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - 313.5}px - 4vw))`
+        } else {
+            contador = 0
+            listasDesenhos[i].style.transform = `translateX(0)`
+        }
+    })
+    
+})
+
+
+// ==== Fim do mecanismo de carrosel no catálogo ====
+
+
 
 // ==== Início do sistema de troca de avatar ====
 
@@ -133,7 +179,7 @@ if (window.location.pathname == pathPaginaToons) {
     const acessadosRecente = document.querySelector("[data-acessados]")
     if (window.localStorage.getItem("recentes") != null) {
         var listaRecentes = JSON.parse(window.localStorage.getItem("recentes"))
-        h2Acessados.style.display = "block"
+        h2Acessados.style.display = ""
 
     } else {
         h2Acessados.style.display = "none"
