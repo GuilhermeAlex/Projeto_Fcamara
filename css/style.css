@@ -63,8 +63,18 @@ body {
     position: absolute;
     right: 10px;
     top: 50%;
-    /* bottom: 50%; */
     transform: translateY(-50%);
+}
+
+.grid-toggle-avatar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0.5vw;
+}
+
+.toggle-modo-noturno {
+    top: 50%;
+    bottom: 50%;
 }
 
 .header-search {
@@ -74,7 +84,7 @@ body {
     top: 50%;
     bottom: 50%;
     transform: translateY(-50%);
-    right: 2vw;
+    right: 4vw;
     margin-right: 2vw;
     border-width: 2px;
     border-color: white;
@@ -84,8 +94,6 @@ body {
     box-sizing: border-box;
 }
 
-
-/* Posicionamento do avatar ajustado */
 .header-avatar {
     object-fit: cover;
     width: 4vh;
@@ -438,17 +446,17 @@ footer a , footer a:hover{
 /* ==== Fim footer ==== */
 
 /* Modo Noturno*/ 
-#icon{
+#icon {
     width: 30px;
     cursor: pointer;
 }
 
-:root{
+:root {
     --primary-color: #edf2fc;
     --secondary-color: #212121;
 }
 
-.dark-theme{
-    --primary-color: #000106;
+.dark-theme {
+    --primary-color: #121212;
     --secondary-color: #fff;
 }
