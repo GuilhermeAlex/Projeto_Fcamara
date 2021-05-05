@@ -98,30 +98,6 @@ function pesquisar(event) {
 
 // ==== Fim mecanismo de busca ====
 
-// ==== Início do mecanismo de carrosel no catálogo 
-console.log(listasDesenhos)
-console.log(arrowsRight)
-
-arrowsRight.forEach((arrow, i) => {
-    const itemNumber = listasDesenhos[i].querySelectorAll(".item").length
-    let contador = 0
-    arrow.addEventListener('click', () => {
-        if ((contador + 2) <= itemNumber){
-            contador++
-            listasDesenhos[i].style.transform = `translateX(calc(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - 313.5}px - 4vw))`
-        } else {
-            contador = 0
-            listasDesenhos[i].style.transform = `translateX(0)`
-        }
-    })
-    
-})
-
-
-// ==== Fim do mecanismo de carrosel no catálogo ====
-
-
-
 // ==== Início do sistema de troca de avatar ====
 
 const avatar = document.querySelector("[data-avatar]")
@@ -211,7 +187,7 @@ function adicionaInteresse(element) {
         listaRecentes.splice(listaRecentes.indexOf(element.dataset.nome), 1)
         listaRecentes.unshift(element.dataset.nome)
     }
-    while (listaRecentes.length > 3) {
+    while (listaRecentes.length > 6) {
         listaRecentes.pop()
     }
     // Atualiza a lista de recentes na memória local
@@ -220,6 +196,34 @@ function adicionaInteresse(element) {
 
 
 // ==== Fim acessados recentemente ====
+
+// ==== Início do mecanismo de carrosel no catálogo 
+let contador = []
+arrowsRight.forEach((arrow, i) => {
+    const itemNumber = listasDesenhos[i].querySelectorAll("img").length
+    console.log("Tamanho da lista: "+itemNumber)
+    contador.push(0)
+    arrow.addEventListener('click', () => {
+        if ((contador[i]) < itemNumber -3){
+            contador[i]++
+            listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.2967}px)`
+        }
+    })
+    
+})
+arrowsLeft.forEach((arrow, i) => {
+    const itemNumber = listasDesenhos[i].querySelectorAll("img").length
+    arrow.addEventListener('click', () => {
+        if ((contador[i]) > 0){
+            contador[i]--
+            listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.2967}px)`
+        }
+    })
+    
+})
+
+
+// ==== Fim do mecanismo de carrosel no catálogo ====
 
 window.localStorage.setItem("pesquisa", "")
 

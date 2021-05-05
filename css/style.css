@@ -256,10 +256,9 @@ body {
 
 .item {
     text-align: center;
-    margin: 2vh 4vw 2vh 0;
+    margin: 2vh 1vw 2vh 0;
     height: 200px;
-    min-width: 30vw;
-    max-width: 30vw;
+    min-width: 28.67vw;
     max-height: 30vh;
     transition: all ease-in-out .5s;
 }
