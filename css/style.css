@@ -132,12 +132,12 @@ body {
 .main-principal {
     display: block;
     position: relative;
-    background-color: #F7F8F5;
+    background-color: var(--primary-color); /*#F7F8F5;*/
     width: 85vw;
     height: 40vh;
     top: 25px;
     margin: 0 auto;
-    background: var(--primary-color);/*linear-gradient(230deg, #F7F8F5 -9.82%, rgba(255, 255, 255, 0.71875) -9.81%, rgba(255, 255, 255, 0) 67.96%), #503092;*/
+    background: linear-gradient(230deg, #F7F8F5 -9.82%, rgba(255, 255, 255, 0.71875) -9.81%, rgba(255, 255, 255, 0) 67.96%), #503092;
 }
 
 .h2-principal {
@@ -214,7 +214,7 @@ body {
 /* ==== Inicio da toons ==== */
 
 .toons {
-    background-color: white;
+    background-color: var(--primary-color);
 }
 
 .toons h2 {
@@ -275,7 +275,7 @@ body {
 /* ==== Início da time ==== */
 
 .time {
-    background-color: white;
+    background-color: var(--primary-color);
 }
 
 .time h2 {
@@ -378,12 +378,12 @@ footer a , footer a:hover{
 
 /* ==== Fim footer ==== */
 
-/* Modo Norturno*/ 
+/* Modo Noturno*/ 
 #icon{
     width: 30px;
     cursor: pointer;
 }
-/*
+
 :root{
     --primary-color: #edf2fc;
     --secondary-color: #212121;
@@ -393,4 +393,3 @@ footer a , footer a:hover{
     --primary-color: #000106;
     --secondary color: #fff;
 }
-/*
