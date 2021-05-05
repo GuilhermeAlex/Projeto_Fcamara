@@ -259,6 +259,7 @@ body {
     margin: 2vh 1vw 2vh 0;
     height: 200px;
     min-width: 28.67vw;
+    max-width: 28.67vw;
     max-height: 30vh;
     transition: all ease-in-out .5s;
 }

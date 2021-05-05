@@ -5,13 +5,13 @@ const pathPaginaToons = "/html/toons.html"
 
 // Como o mesmo script está sendo usado para mais de uma página, esse if declara as váriaveis da página toons apenas se o script for chamado a partir dela.
 if (window.location.pathname == pathPaginaToons) {
-    var h2Desenhos = document.querySelector("[data-desenhos]")
+    var h2Catalogo = document.querySelector("[data-desenhos]")
     var h2Acessados = document.querySelector("[data-h2-acessados]")
-    var maisAcessados = document.querySelector("[data-acessados]")
-    var desenhosElement = document.querySelector("[data-catalogo]")
-    var desenhosArray = document.querySelectorAll("[data-desenho]")
-    var listContainer = document.querySelectorAll(".list-container")
+    var listaAcessados = document.querySelector("[data-acessados-recentemente]")
     var catalogo = document.querySelector("[data-catalogo]")
+    var catalogoCompleto = document.querySelector("[data-catalogo]")
+    var catalogoDesenhos = catalogoCompleto.querySelectorAll("[data-desenho]")
+    var desenhosDiv = document.querySelector(".desenhos")
     var achados = 0
     var arrowsRight = document.querySelectorAll("[data-arrow-right]")
     var arrowsLeft = document.querySelectorAll("[data-arrow-left]")
@@ -45,54 +45,36 @@ function pesquisar(event) {
     const busca = input.value.toUpperCase();
     // Se a caixa de pesquisa tiver vazia ele restaura todos e retorna
     if (input.value == '') {
-        h2Acessados.className = ""
-        maisAcessados.className = "catalogo"
-        catalogo.className= "catalogo"
-        listContainer.forEach((list) => {list.className = "list-container"})
-        arrowsLeft.forEach((arrow) => {
-            arrow.className = "fas fa-chevron-left arrow arrow-left"
-        })
-        arrowsRight.forEach((arrow) => {
-            arrow.className = "fas fa-chevron-right arrow arrow-right"
-        })
-        h2Desenhos.innerHTML = "Catálogo"
-        for (let i = 0; i < desenhosArray.length; i++) {
-            const elemento = desenhosArray[i]
-            elemento.className = "item"
-        }
+        h2Catalogo.className = "none"
+        catalogoCompleto.className = "none"
+        desenhosDiv.className = "desenhos"
         return
     }
-    listContainer.forEach((list) => {list.className = "list-container-pesquisa"})
-    catalogo.className = "catalogo-pesquisa"
-    arrowsLeft.forEach((arrow) => {
-        arrow.className = "none"
-    })
-    arrowsRight.forEach((arrow) => {
-        arrow.className = "none"
-    })
+    desenhosDiv.className = "none"
+    catalogoCompleto.className = "catalogo-pesquisa"
     // Restaura todos os desenhos
-    for (let i = 0; i < desenhosArray.length; i++) {
-        const elemento = desenhosArray[i]
+    for (let i = 0; i < catalogoDesenhos.length; i++) {
+        const elemento = catalogoDesenhos[i]
         elemento.className = "item-pesquisa"
         achados++
     }
     // Esconde os que não estão de acordo com a pesquisa
-    for (let i = 0; i < desenhosArray.length; i++) {
-        const elemento = desenhosArray[i]
+    for (let i = 0; i < catalogoDesenhos.length; i++) {
+        const elemento = catalogoDesenhos[i]
         const nome = elemento.dataset.nome
-        const genero = elemento.dataset.genero
-        if ((nome.toUpperCase().indexOf(busca) == -1) && (genero.toUpperCase().indexOf(busca) == -1)) {
+        if (nome.toUpperCase().indexOf(busca) == -1) {
             elemento.className = "none"
             achados--
         }
     }
+    h2Catalogo.className = ""
     if (achados == 0) {
-        h2Desenhos.innerHTML = `Desculpe, não encontramos nenhum desenho com base na pesquisa "${input.value}"`
+        h2Catalogo.innerHTML = `Desculpe, não encontramos nenhum desenho com base na pesquisa "${input.value}"`
+    } else if (achados == 1){
+        h2Catalogo.innerHTML = `Foi encontrado ${achados} desenho com base na pesquisa "${input.value}"`
     } else {
-        h2Desenhos.innerHTML = `Foram encontrados ${achados} desenhos com base na pesquisa "${input.value}"`
+        h2Catalogo.innerHTML = `Foram encontrados ${achados} desenhos com base na pesquisa "${input.value}"`
     }
-    maisAcessados.className = "none"
-    h2Acessados.className = "none"
     achados = 0
 }
 
@@ -155,10 +137,12 @@ if (window.location.pathname == pathPaginaToons) {
     const acessadosRecente = document.querySelector("[data-acessados]")
     if (window.localStorage.getItem("recentes") != null) {
         var listaRecentes = JSON.parse(window.localStorage.getItem("recentes"))
-        h2Acessados.style.display = ""
+        h2Acessados.className = ""
+        listaAcessados.className = "list-container"
 
     } else {
-        h2Acessados.style.display = "none"
+        h2Acessados.className = "none"
+        listaAcessados.className = "none"
         var listaRecentes = []
     }
 
@@ -166,11 +150,12 @@ if (window.location.pathname == pathPaginaToons) {
     function atualizaRecentesNaTela(lista) {
         for (let i = 0; i < lista.length; i++) {
             let desenhoInteresseNome = lista[i]
-            for (let c = 0; c < desenhosArray.length; c++) {
-                var elemento = desenhosArray[c]
+            for (let c = 0; c < catalogoDesenhos.length; c++) {
+                var elemento = catalogoDesenhos[c]
                 const nome = elemento.dataset.nome
                 if (desenhoInteresseNome.toUpperCase() == nome.toUpperCase()) {
                     var elemento = elemento.cloneNode(true)
+                    elemento.className = "item"
                     acessadosRecente.appendChild(elemento)
                 }
             }
