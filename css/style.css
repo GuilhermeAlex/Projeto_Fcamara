@@ -362,7 +362,7 @@ body {
     display: grid;
     grid-template-columns: 75% 25%;
     justify-content: center;
-    width: 90%;
+    width: 98%;
     margin-bottom: 3%;
 }
 
@@ -389,7 +389,7 @@ body {
     display: grid;
     grid-template-columns: 25% 75%;
     justify-content: center;
-    width: 90%;
+    width: 98%;
     margin-bottom: 3%;
     margin-left: 3%;
 }
