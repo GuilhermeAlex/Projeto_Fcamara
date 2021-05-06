@@ -740,7 +740,14 @@
         crossorigin="anonymous"></script>
         <script>
             //let modoNoturno = localStorage.getItem('modoNoturno')
-            //const darkModeToggle = document.querySelector('#icon');
+            //const modoNoturnoToggle = document.querySelector('#icon');
+            //const enableModoNoturno = () => {
+            // 1. Adicionando o class no body 
+            //document.body.classList.add('modoNoturno');
+            // 2. Atualizando o modo noturno no LocalStorage
+            //localStorage.setItem('modoNoturno', 'enabled');
+            //}
+  document.body.classList.add('darkmode');
         var icon = document.getElementById("icon");
             icon.onclick = function(){
             document.body.classList.toggle("dark-theme");
