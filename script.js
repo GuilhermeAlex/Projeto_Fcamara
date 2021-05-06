@@ -195,7 +195,7 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
                     contador[i]++
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.89}px)`
                 }
-            } else if (window.matchMedia("(max-width: 600px)").matches){ 
+            } else if (window.matchMedia("(max-width: 800px)").matches){ 
                 if ((contador[i]) < itemNumber -2){
                     contador[i]++
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.445}px)`
@@ -221,7 +221,7 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
                 contador[i]--
                 if (window.matchMedia("(max-width: 400px)").matches){
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.89}px)`
-                } else if (window.matchMedia("(max-width: 600px)").matches){   
+                } else if (window.matchMedia("(max-width: 800px)").matches){   
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.445}px)`
                 } else if (window.matchMedia("(max-width: 1100px)").matches){   
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.299}px)`
