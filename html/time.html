@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../imagens/favicon-placeholder.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 <body>
   <header class="header-desktop">
@@ -15,7 +16,7 @@
       <!-- Está com a logo da alura que é apenas o placeholder. -->
       <!-- Logo inserida dentro da div para facilitar o css. -->
       <div class="logo">
-          <img src="../imagens/Logo-final.png" alt="Logo ToonsVille" class="header-logo">
+          <img src="../imagens/Logo final.svg" alt="Logo ToonsVille" class="header-logo">
       </div>
       <!-- Menu Inicio -->
       <nav class="nav-desktop">
@@ -141,15 +142,35 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
         <script>
-        var icon = document.getElementById("icon");
-          icon.onclick = function(){
-          document.body.classList.toggle("dark-theme");
-          if(document.body.classList.contains("dark-theme")){
-              icon.src = "../imagens/sun.png";
-          }else{
-                  icon.src = "../imagens/moon.png";
-              }
+          //Função do Modo Noturno e mesmo que o usuário atualiaze a página a informação fica guarda até que o usuário mude de novo.
+          let modoNoturno = localStorage.getItem('modoNoturno')
+           const modoNoturnoToggle = document.querySelector('#icon');
+           const enableModoNoturno = () => {
+            // 1. Adicionando a class no body
+          document.body.classList.add('dark-theme');
+          // 2. Atualizando o modo noturno no localStorage 
+          localStorage.setItem('modoNoturno', 'enabled');
           }
+          const disableModoNoturno = () => { 
+          // 1. Removendo a class do body the class from the body
+          document.body.classList.remove('dark-theme');
+           // 2. Atualizando o modo noturno no localStorage 
+          localStorage.setItem('modoNoturno', null);
+          }
+           if (modoNoturno === 'enabled') {
+           enableModoNoturno();
+}
+        //Toggle serve como um interruptor, ele vai ligar e desligar o modo noturno 
+        modoNoturnoToggle.addEventListener('click', () => {
+        modoNoturno = localStorage.getItem('modoNoturno'); 
+        //Se ainda nao foi ligado, ligue-o
+        if (modoNoturno!== 'enabled') {
+    enableModoNoturno();
+      //Se ja foi ligado, desligue-o 
+       } else {  
+      disableModoNoturno(); 
+  }
+});
           </script>
   </main>
   <footer>

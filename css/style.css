@@ -171,10 +171,6 @@ body {
 
 /* Estilização do destaque */
 
-.carousel-inner {
-    z-index: -1;
-}
-
 .carousel-caption {
     color: #F7F8F5;
 }
@@ -201,6 +197,14 @@ body {
 }
 
 /* Estilização jumbotron */
+
+.jumbotron h1 {
+    font-size: 2.5em;
+    font-variant: small-caps;
+    font-family: 'Poppins', monospace;
+    color: #FFEC3E;
+    background-color: #503092;
+}
 
 .padronizar-imagens {
     max-width: 200px;
@@ -258,7 +262,7 @@ body {
     display: grid;
     justify-content: center;
     position: relative;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 25% 25% 25% 25%;
     padding: 1vw;
 }
 
@@ -266,8 +270,8 @@ body {
     text-align: center;
     margin: 2vh 1vw 2vh 0;
     height: 200px;
-    min-width: 28.67vw;
-    max-width: 28.67vw;
+    min-width: 21.3vw;
+    max-width: 21.3vw;
     max-height: 30vh;
     transition: all ease-in-out .5s;
 }
@@ -276,10 +280,46 @@ body {
     text-align: center;
     margin: 2vh auto;
     height: 200px;
-    min-width: 30vw;
-    max-width: 30vw;
+    min-width: 21.3vw;
+    max-width: 21.3vw;
     max-height: 30vh;
     transition: all ease-in-out .5s;
+}
+
+@media (max-width: 1100px) {
+    .item {
+        min-width: 28.9vw;
+    }
+    .item-pesquisa {
+        min-width: 28.9vw;
+    }
+    .catalogo-pesquisa {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media (max-width: 800px) {
+    .item {
+        min-width: 43.5vw;
+    }
+    .item-pesquisa {
+        min-width: 43.5vw;
+    }
+    .catalogo-pesquisa {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    .item {
+        min-width: 88vw;
+    }
+    .item-pesquisa {
+        min-width: 88vw;
+    }
+    .catalogo-pesquisa {
+        grid-template-columns: 100%;
+    }
 }
 
 .item:hover {
@@ -373,7 +413,7 @@ body {
 }
 
 .item-imagem-direita {
-    background: #503092;
+    background-color: #503092;
     padding: 6% 0 6% 0;
     text-align: center;
     font-family: 'Poppins', monospace;
@@ -396,7 +436,7 @@ body {
 }
 
 .item-imagem-esquerda {
-    background: #503092;
+    background-color: #503092;
     padding: 6% 0 6% 0;
     text-align: center;
     font-family: 'Poppins', monospace;
@@ -460,4 +500,55 @@ footer a , footer a:hover{
 .dark-theme {
     --primary-color: #121212;
     --secondary-color: #fff;
+    background-color: #121212;
+}
+
+.dark-theme .header-desktop {
+    background-color: #1d1d1d;
+}
+
+.dark-theme .modal-content {
+    background-color: #121212;
+}
+
+.dark-theme .jumbotron {
+    background-color: #121212;
+    color:rgba(255, 255, 255)
+}
+
+.dark-theme .jumbotron h1 {
+    color: #fff;
+    opacity: 80%;
+    background-color:rgb(27, 27, 27);
+}
+
+.dark-theme .caption-container {
+    background-color: #121212;
+    color:rgba(255, 255, 255);
+}
+
+.dark-theme .toons h2 {
+    color: rgba(255, 255, 255);
+}
+
+.dark-theme .time {
+    color: rgba(255, 255, 255);
+}
+
+.dark-theme .time h2 {
+    color: rgba(255, 255, 255)
+}
+
+.dark-theme .item-imagem-direita {
+    background-color:rgba(255, 255, 255, 0.05);
+    color:rgba(255, 255, 255, 0.5)
+}
+
+.dark-theme .item-imagem-esquerda {
+    background-color:rgba(255, 255, 255, 0.05);
+    color:rgba(255, 255, 255, 0.5)
+}
+
+.dark-theme footer {
+    background-color: #1d1d1d;
 }
