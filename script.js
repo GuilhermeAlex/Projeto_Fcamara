@@ -190,16 +190,25 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
         console.log("Tamanho da lista: "+itemNumber)
         contador.push(0)
         arrow.addEventListener('click', () => {
-            if (window.matchMedia("(max-width: 600px)").matches)
-                { 
+            if (window.matchMedia("(max-width: 400px)").matches){
+                if ((contador[i]) < itemNumber -1){
+                    contador[i]++
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.89}px)`
+                }
+            } else if (window.matchMedia("(max-width: 600px)").matches){ 
                 if ((contador[i]) < itemNumber -2){
                     contador[i]++
-                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.51}px)`
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.445}px)`
                 }
-            } else {
+            } else if (window.matchMedia("(max-width: 1100px)").matches){ 
                 if ((contador[i]) < itemNumber -3){
                     contador[i]++
-                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.2967}px)`
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.299}px)`
+                }
+            } else {
+                if ((contador[i]) < itemNumber -4){
+                    contador[i]++
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.223}px)`
                 }
             }
         })
@@ -210,11 +219,14 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
         arrow.addEventListener('click', () => {
             if ((contador[i]) > 0){
                 contador[i]--
-                if (window.matchMedia("(max-width: 600px)").matches)
-                {   
-                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.51}px)`
+                if (window.matchMedia("(max-width: 400px)").matches){
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.89}px)`
+                } else if (window.matchMedia("(max-width: 600px)").matches){   
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.445}px)`
+                } else if (window.matchMedia("(max-width: 1100px)").matches){   
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.299}px)`
                 } else {
-                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.2967}px)`
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.223}px)`
                 }
             }
         })

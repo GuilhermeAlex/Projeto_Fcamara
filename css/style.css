@@ -270,15 +270,27 @@ body {
     text-align: center;
     margin: 2vh 1vw 2vh 0;
     height: 200px;
-    min-width: 28.67vw;
-    max-width: 28.67vw;
+    min-width: 21.3vw;
+    max-width: 21.3vw;
     max-height: 30vh;
     transition: all ease-in-out .5s;
 }
 
+@media (max-width: 1100px) {
+    .item {
+        min-width: 28.9vw;
+    }
+}
+
 @media (max-width: 600px) {
     .item {
-        min-width: 50vw;
+        min-width: 43.5vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .item {
+        min-width: 88vw;
     }
 }
 
