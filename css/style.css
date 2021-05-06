@@ -171,10 +171,6 @@ body {
 
 /* Estilização do destaque */
 
-.carousel-inner {
-    z-index: -1;
-}
-
 .carousel-caption {
     color: #F7F8F5;
 }
@@ -478,4 +474,10 @@ footer a , footer a:hover{
 .dark-theme .jumbotron h1 {
     color: #fff;
     opacity: 80%;
+    background-color:rgb(27, 27, 27)
+}
+
+.dark-theme .caption-container {
+    background-color: #121212;
+    color:rgba(255, 255, 255, 80);
 }
