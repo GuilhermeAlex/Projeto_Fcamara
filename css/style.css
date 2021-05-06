@@ -464,6 +464,7 @@ footer a , footer a:hover{
 .dark-theme {
     --primary-color: #121212;
     --secondary-color: #fff;
+    background-color: #121212;
 }
 
 .dark-theme .header-desktop {
@@ -493,8 +494,6 @@ footer a , footer a:hover{
 .dark-theme .toons h2 {
     color: rgba(255, 255, 255);
 }
-
-/* Corrigir linha branca no final */
 
 .dark-theme .time {
     color: rgba(255, 255, 255);
