@@ -20,7 +20,7 @@
         <!-- Está com a logo da alura que é apenas o placeholder. -->
         <!-- Logo inserida dentro da div para facilitar o css. -->
         <div class="logo">
-            <img src="../imagens/Logo final.svg" alt="Logo ToonsVille" class="header-logo">
+            <img src="../imagens/Logo-final.png" alt="Logo ToonsVille" class="header-logo">
         </div>
         <!-- Menu Inicio -->
         <nav class="nav-desktop">
@@ -738,7 +738,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script>var icon = document.getElementById("icon");
+        <script>
+            //let modoNoturno = localStorage.getItem('modoNoturno')
+            //const modoNoturnoToggle = document.querySelector('#icon');
+            //const enableModoNoturno = () => {
+            // 1. Adicionando o class no body 
+            //document.body.classList.add('modoNoturno');
+            // 2. Atualizando o modo noturno no LocalStorage
+            //localStorage.setItem('modoNoturno', 'enabled');
+            //}
+  document.body.classList.add('darkmode');
+        var icon = document.getElementById("icon");
             icon.onclick = function(){
             document.body.classList.toggle("dark-theme");
             if(document.body.classList.contains("dark-theme")){
