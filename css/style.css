@@ -466,6 +466,14 @@ footer a , footer a:hover{
     --secondary-color: #fff;
 }
 
+.dark-theme .header-desktop {
+    background-color: #121212;
+}
+
+.dark-theme .modal-content {
+    background-color: #121212;
+}
+
 .dark-theme .jumbotron {
     background-color: #121212;
     color:rgba(255, 255, 255, 80)
