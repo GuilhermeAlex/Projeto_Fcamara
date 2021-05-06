@@ -190,9 +190,17 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
         console.log("Tamanho da lista: "+itemNumber)
         contador.push(0)
         arrow.addEventListener('click', () => {
-            if ((contador[i]) < itemNumber -3){
-                contador[i]++
-                listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.2967}px)`
+            if (window.matchMedia("(max-width: 600px)").matches)
+                { 
+                if ((contador[i]) < itemNumber -2){
+                    contador[i]++
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.51}px)`
+                }
+            } else {
+                if ((contador[i]) < itemNumber -3){
+                    contador[i]++
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.2967}px)`
+                }
             }
         })
         
@@ -202,7 +210,12 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
         arrow.addEventListener('click', () => {
             if ((contador[i]) > 0){
                 contador[i]--
-                listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.2967}px)`
+                if (window.matchMedia("(max-width: 600px)").matches)
+                {   
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.51}px)`
+                } else {
+                    listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.2967}px)`
+                }
             }
         })
         

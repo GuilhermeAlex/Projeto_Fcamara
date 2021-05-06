@@ -276,6 +276,12 @@ body {
     transition: all ease-in-out .5s;
 }
 
+@media (max-width: 600px) {
+    .item {
+        min-width: 50vw;
+    }
+}
+
 .item-pesquisa {
     text-align: center;
     margin: 2vh auto;
