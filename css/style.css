@@ -202,6 +202,14 @@ body {
 
 /* Estilização jumbotron */
 
+.jumbotron h1 {
+    font-size: 2.5em;
+    font-variant: small-caps;
+    font-family: 'Poppins', monospace;
+    color: #FFEC3E;
+    background-color: #503092;
+}
+
 .padronizar-imagens {
     max-width: 200px;
     height: auto;
@@ -460,4 +468,14 @@ footer a , footer a:hover{
 .dark-theme {
     --primary-color: #121212;
     --secondary-color: #fff;
+}
+
+.dark-theme .jumbotron {
+    background-color: #121212;
+    color:rgba(255, 255, 255, 80)
+}
+
+.dark-theme .jumbotron h1 {
+    color: #fff;
+    opacity: 80%;
 }
