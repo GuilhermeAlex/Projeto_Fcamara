@@ -453,9 +453,17 @@ body {
     padding: 3% 4% 6% 4%;
     text-align: justify;
 }
+@media (max-width: 400px){
+.sobreTamanho{
+    height: auto;
+}
+}
 
 /* ==== Footer ==== */
+/* @media (max-width: 400px){
 
+    
+} */
 footer {
     position: absolute;
     text-align: center;
