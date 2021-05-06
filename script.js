@@ -87,13 +87,13 @@ const divIcones = document.querySelector(["[data-icones]"])
 
 // Verifica se o script está sendo acessado a partir da página index, pois o caminho para as imagens a partir dela é diferente.
 if (window.location.pathname.endsWith("/index.html")) {
-    var icones = ["imagens/avatar-icons/default-avatar.png", "imagens/avatar-icons/power-girl.jpg", "imagens/avatar-icons/arnold.jpg", "imagens/avatar-icons/coragem.jpg"]
+    var icones = ["imagens/avatar-icons/default-avatar.png", "imagens/avatar-icons/power-girl.jpg", "imagens/avatar-icons/arnold.jpg", "imagens/avatar-icons/coragem.jpg", "imagens/avatar-icons/captain-caveman-200x200.jpg", "imagens/avatar-icons/homer-200x200.jpg", "imagens/avatar-icons/kid-goku-200x200.jpg", "imagens/avatar-icons/mestre-dos-magos-200x200.jpg", "imagens/avatar-icons/mickey-200x200.jpg", "imagens/avatar-icons/naruto-200x200.jpg", "imagens/avatar-icons/pernalonga-200x200.jpg", "imagens/avatar-icons/pingu-200x200.jpg", "imagens/avatar-icons/pink-panther-200x200.jpg", "imagens/avatar-icons/scooby-doo-200x200.jpg", "imagens/avatar-icons/Seiya-200x200.jpg"]
     if (window.localStorage.getItem("avatar") != null) {
         const avatarPessoal = window.localStorage.getItem("avatar")
         avatar.src = avatarPessoal
     }
 } else {
-    var icones = ["../imagens/avatar-icons/default-avatar.png", "../imagens/avatar-icons/power-girl.jpg", "../imagens/avatar-icons/arnold.jpg", "../imagens/avatar-icons/coragem.jpg"]
+    var icones = ["../imagens/avatar-icons/default-avatar.png", "../imagens/avatar-icons/power-girl.jpg", "../imagens/avatar-icons/arnold.jpg", "../imagens/avatar-icons/coragem.jpg", "../imagens/avatar-icons/captain-caveman-200x200.jpg", "../imagens/avatar-icons/homer-200x200.jpg", "../imagens/avatar-icons/kid-goku-200x200.jpg", "../imagens/avatar-icons/mestre-dos-magos-200x200.jpg", "../imagens/avatar-icons/mickey-200x200.jpg", "../imagens/avatar-icons/naruto-200x200.jpg", "../imagens/avatar-icons/pernalonga-200x200.jpg", "../imagens/avatar-icons/pingu-200x200.jpg", "../imagens/avatar-icons/pink-panther-200x200.jpg", "../imagens/avatar-icons/scooby-doo-200x200.jpg", "../imagens/avatar-icons/Seiya-200x200.jpg"]
     if (window.localStorage.getItem("avatar") != null) {
         const avatarPessoal = window.localStorage.getItem("avatar")
         avatar.src = "../" + avatarPessoal
