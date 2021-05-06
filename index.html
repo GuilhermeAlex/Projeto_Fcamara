@@ -281,16 +281,46 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
     <script>
-    var icon = document.getElementById("icon");
-    
-      icon.onclick = function(){
-      document.body.classList.toggle("dark-theme");
-      if(document.body.classList.contains("dark-theme")){
-          icon.src = "imagens/sun.png";
-      }else{
-              icon.src = "imagens/moon.png";
+      //Função do Modo Noturno e mesmo que o usuário atualiaze a página a informação fica guarda até que o usuário mude de novo.
+      let modoNoturno = localStorage.getItem('modoNoturno')
+           const modoNoturnoToggle = document.querySelector('#icon');
+           const enableModoNoturno = () => {
+            // 1. Adicionando a class no body
+          document.body.classList.add('dark-theme');
+          // 2. Atualizando o modo noturno no localStorage 
+          localStorage.setItem('modoNoturno', 'enabled');
           }
-      }
+          const disableModoNoturno = () => { 
+          // 1. Removendo a class do body the class from the body
+          document.body.classList.remove('dark-theme');
+           // 2. Atualizando o modo noturno no localStorage 
+          localStorage.setItem('modoNoturno', null);
+          }
+           if (modoNoturno === 'enabled') {
+           enableModoNoturno();
+}
+        //Toggle serve como um interruptor, ele vai ligar e desligar o modo noturno 
+        modoNoturnoToggle.addEventListener('click', () => {
+        modoNoturno = localStorage.getItem('modoNoturno'); 
+        //Se ainda nao foi ligado, ligue-o
+        if (modoNoturno!== 'enabled') {
+    enableModoNoturno();
+      //Se ja foi ligado, desligue-o 
+       } else {  
+      disableModoNoturno(); 
+  }
+});
+
+    //var icon = document.getElementById("icon");
+    
+      //icon.onclick = function(){
+      //document.body.classList.toggle("dark-theme");
+      //if(document.body.classList.contains("dark-theme")){
+          //icon.src = "imagens/sun.png";
+      //}else{
+              //icon.src = "imagens/moon.png";
+          //}
+      //}
       </script>
     
 </body>
