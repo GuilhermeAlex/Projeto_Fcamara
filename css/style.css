@@ -377,7 +377,7 @@ body {
 }
 
 .item-imagem-direita {
-    background: #503092;
+    background-color: #503092;
     padding: 6% 0 6% 0;
     text-align: center;
     font-family: 'Poppins', monospace;
@@ -400,7 +400,7 @@ body {
 }
 
 .item-imagem-esquerda {
-    background: #503092;
+    background-color: #503092;
     padding: 6% 0 6% 0;
     text-align: center;
     font-family: 'Poppins', monospace;
@@ -476,20 +476,38 @@ footer a , footer a:hover{
 
 .dark-theme .jumbotron {
     background-color: #121212;
-    color:rgba(255, 255, 255, 80)
+    color:rgba(255, 255, 255)
 }
 
 .dark-theme .jumbotron h1 {
     color: #fff;
     opacity: 80%;
-    background-color:rgb(27, 27, 27)
+    background-color:rgb(27, 27, 27);
 }
 
 .dark-theme .caption-container {
     background-color: #121212;
-    color:rgba(255, 255, 255, 80);
+    color:rgba(255, 255, 255);
 }
 
 .dark-theme .toons h2 {
-    color: rgba(255, 255, 255, 80);
+    color: rgba(255, 255, 255);
+}
+
+.dark-theme .time {
+    color: rgba(255, 255, 255);
+}
+
+.dark-theme .time h2 {
+    color: rgba(255, 255, 255)
+}
+
+.dark-theme .item-imagem-direita {
+    background-color:rgba(255, 255, 255, 0.05);
+    color:rgba(255, 255, 255, 0.5)
+}
+
+.dark-theme .item-imagem-esquerda {
+    background-color:rgba(255, 255, 255, 0.05);
+    color:rgba(255, 255, 255, 0.5)
 }
