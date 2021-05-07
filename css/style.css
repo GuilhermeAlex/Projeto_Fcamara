@@ -205,11 +205,45 @@ body {
     color: #FFEC3E;
     background-color: #503092;
 }
+@media (max-width: 414px){
+    .materiais{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .header-search{
+        display: none;
+    }
+    .item-imagem-esquerda img , .item-imagem-direita img{
+        width: 90px!important;
+    }
+    .item-texto-direita, .item-texto-esquerda{
+        font-size: large;
+    }
+}
+@media (max-width: 1024px){
+    .responseCard img {
+        width: 180px; 
+    }
+}
+@media (max-width: 1024px){
+    .materiais{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around !important;
+    }
+    .item-texto-esquerda, .item-texto-direita{
+        display: flex;
+        align-items: center;
+    }
+}
+
 
 .padronizar-imagens {
     max-width: 200px;
     height: auto;
 }
+
 /* ==== Final do main ==== */
 
 /* ==== Final da home ==== */
