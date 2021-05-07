@@ -196,7 +196,6 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
     let contador = []
     arrowsRight.forEach((arrow, i) => {
         const itemNumber = listasDesenhos[i].querySelectorAll("img").length
-        console.log("Tamanho da lista: "+itemNumber)
         contador.push(0)
         arrow.addEventListener('click', () => {
             if (window.matchMedia("(max-width: 400px)").matches){
@@ -220,6 +219,9 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.223}px)`
                 }
             }
+            var temp = arrow.style.pointerEvents
+            arrow.style.pointerEvents = "none"
+            setTimeout(() => {arrow.style.pointerEvents = temp}, 500)
         })
         
     })
@@ -238,8 +240,10 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.223}px)`
                 }
             }
+            var temp = arrow.style.pointerEvents
+            arrow.style.pointerEvents = "none"
+            setTimeout(() => {arrow.style.pointerEvents = temp}, 500)
         })
-        
     })
 }
 
