@@ -90,15 +90,20 @@ if (window.location.pathname.endsWith("/index.html")) {
     var icones = ["imagens/avatar-icons/default-avatar.png", "imagens/avatar-icons/power-girl.jpg", "imagens/avatar-icons/arnold.jpg", "imagens/avatar-icons/coragem.jpg", "imagens/avatar-icons/captain-caveman-200x200.jpg", "imagens/avatar-icons/homer-200x200.jpg", "imagens/avatar-icons/kid-goku-200x200.jpg", "imagens/avatar-icons/mestre-dos-magos-200x200.jpg", "imagens/avatar-icons/mickey-200x200.jpg", "imagens/avatar-icons/naruto-200x200.jpg", "imagens/avatar-icons/pernalonga-200x200.jpg", "imagens/avatar-icons/pingu-200x200.jpg", "imagens/avatar-icons/pink-panther-200x200.jpg", "imagens/avatar-icons/scooby-doo-200x200.jpg", "imagens/avatar-icons/Seiya-200x200.jpg"]
     if (window.localStorage.getItem("avatar") != null) {
         const avatarPessoal = window.localStorage.getItem("avatar")
+        const avatarAlt = window.localStorage.getItem("avatarAlt")
         avatar.src = avatarPessoal
+        avatar.alt = avatarAlt
     }
 } else {
     var icones = ["../imagens/avatar-icons/default-avatar.png", "../imagens/avatar-icons/power-girl.jpg", "../imagens/avatar-icons/arnold.jpg", "../imagens/avatar-icons/coragem.jpg", "../imagens/avatar-icons/captain-caveman-200x200.jpg", "../imagens/avatar-icons/homer-200x200.jpg", "../imagens/avatar-icons/kid-goku-200x200.jpg", "../imagens/avatar-icons/mestre-dos-magos-200x200.jpg", "../imagens/avatar-icons/mickey-200x200.jpg", "../imagens/avatar-icons/naruto-200x200.jpg", "../imagens/avatar-icons/pernalonga-200x200.jpg", "../imagens/avatar-icons/pingu-200x200.jpg", "../imagens/avatar-icons/pink-panther-200x200.jpg", "../imagens/avatar-icons/scooby-doo-200x200.jpg", "../imagens/avatar-icons/Seiya-200x200.jpg"]
     if (window.localStorage.getItem("avatar") != null) {
         const avatarPessoal = window.localStorage.getItem("avatar")
+        const avatarAlt = window.localStorage.getItem("avatarAlt")
         avatar.src = "../" + avatarPessoal
+        avatar.alt = avatarAlt
     }
 }
+var iconesAlt = ["Ícone de avatar padrão da web, silhueta masculina azul.", "Ícone de avatar com pequena imagem de Florzinha, do desenho 'As meninas super-poderosas'.", "Ícone de avatar com pequena imagem de Arnold, do desenho 'Hey Arnold'.", "Ícone de avatar com pequena imagem de coragem, do desenho 'Coragem, o cão covarde'.", "Ícone de avatar com pequena imagem do capitão caverna, do desenho 'Capitão caverna e as panterinhas'.", "Ícone de avatar com pequena imagem de Homer, do desenho 'Os Simpsons'.", "Ícone de avatar com pequena imagem de Goku criança, do desenho 'Dragon Ball'.", "Ícone de avatar com pequena imagem do mestre dos magos, do desenho 'Caverna do dragão'.", "Ícone de avatar com pequena imagemdo Mickey pilotando o navio em um estilo de desenho antigo.", "Ícone de avatar com pequena imagem do Naruto animado do anime 'Naruto clássico'.", "Ícone de avatar com pequena imagem do pernalonga.", "Ícone de avatar com pequena imagem do Pingu com as nadadeiras na cintura.", "Ícone de avatar com pequena imagem da pantera cor de rosa com cara de surpresa.", "Ícone de avatar com pequena imagem do scooby doo sobre um fundo azul.", "Ícone de avatar com pequena imagem do Seiya do desenho 'Cavaleiros do Zodíaco'."]
 
 // Coloca o display da janela de escolha de avatares como "none" e adiciona uma função ao avatar para que ao ser clicado mude o display da janela de icones
 
@@ -111,6 +116,7 @@ function atualizarIcones() {
         var element2 = document.createElement("img")
         element2.className = "icones"
         element2.src = icones[i]
+        element2.alt = iconesAlt[i]
         element2.addEventListener('click', trocarAvatar)
         element.appendChild(element2)
         divIcones.appendChild(element)
@@ -121,10 +127,13 @@ function atualizarIcones() {
 
 function trocarAvatar(element) {
     element = element.target
+    window.localStorage.setItem("avatarAlt", element.alt)
+    avatar.alt = element.alt
     var temp = element.src
     element = avatar.src
     avatar.src = temp
     window.localStorage.setItem("avatar", avatar.src.slice(avatar.src.indexOf("imagens")))
+
 }
 
 // ==== Fim do sistema de troca de avatar ====
