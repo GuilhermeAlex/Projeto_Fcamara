@@ -425,7 +425,7 @@ body {
     text-align: justify;
 }
 
-hr.solid {
+.solid {
     border-top: 1px solid #503092;
     width: 90%;
 }
@@ -616,6 +616,11 @@ footer a , footer a:hover{
     color:rgba(255, 255, 255, 0.5)
 }
 
+.dark-theme .solid {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .dark-theme footer {
     background-color: #1d1d1d;
 }
+
