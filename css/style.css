@@ -454,6 +454,11 @@ hr.solid {
     text-decoration: none;
 }
 
+.container-grids {
+    padding: 5% 5% 1% 5%;
+    text-align: justify;
+}
+
 .grid-imagem-direita {
     display: grid;
     grid-template-columns: 75% 25%;
@@ -486,8 +491,6 @@ hr.solid {
     grid-template-columns: 25% 75%;
     justify-content: center;
     width: 98%;
-    margin-bottom: 3%;
-    margin-left: 3%;
 }
 
 .item-imagem-esquerda {
