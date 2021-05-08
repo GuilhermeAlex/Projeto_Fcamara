@@ -420,6 +420,16 @@ body {
     background-color: var(--primary-color);
 }
 
+.container-explicativo {
+    padding: 5% 5% 1% 5%;
+    text-align: justify;
+}
+
+hr.solid {
+    border-top: 1px solid #503092;
+    width: 90%;
+}
+
 .time h2 {
     margin-top: 0;
     padding: 1em 1em 0.2em;
@@ -431,6 +441,17 @@ body {
 .time h1 {
     font-family: 'Poppins', monospace;
     letter-spacing: -0.75px;
+}
+
+.time a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+}
+
+.time a:hover {
+    color: #FFEC3E;
+    text-decoration: none;
 }
 
 .grid-imagem-direita {
