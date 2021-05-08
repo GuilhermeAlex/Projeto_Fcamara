@@ -432,7 +432,7 @@ hr.solid {
 
 .time h2 {
     margin-top: 0;
-    padding: 1em 1em 0.2em;
+    padding: 1em 0em;
     color: #FF66C4;
     font-family: 'Poppins', monospace;
     letter-spacing: -0.75px;
@@ -468,7 +468,7 @@ hr.solid {
 }
 
 .item-texto-esquerda {
-    padding: 3% 4% 6% 4%;
+    padding: 3% 4% 6% 0%;
     text-align: justify;
 }
 
@@ -491,6 +491,7 @@ hr.solid {
     grid-template-columns: 25% 75%;
     justify-content: center;
     width: 98%;
+    margin-bottom: 3%;
 }
 
 .item-imagem-esquerda {
@@ -508,7 +509,7 @@ hr.solid {
 }
 
 .item-texto-direita {
-    padding: 3% 4% 6% 4%;
+    padding: 3% 0% 6% 4%;
     text-align: justify;
 }
 @media (max-width: 400px){
