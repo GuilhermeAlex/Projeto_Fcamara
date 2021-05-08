@@ -40,7 +40,8 @@ function pesquisar(event) {
     // Verifica se o usuário se encontra na página do catalógo, caso não se encontre, encaminha para ela.
     if (window.location.pathname.endsWith(pathPaginaToons) == false) {
         window.localStorage.setItem("pesquisa", event.key)
-        return window.location.pathname = pathPaginaToons
+        let caminho = document.querySelector('[data-caminho]')
+        return caminho.click()
     }
     const busca = input.value.toUpperCase();
     // Se a caixa de pesquisa tiver vazia ele restaura todos e retorna
