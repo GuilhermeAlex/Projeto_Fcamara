@@ -70,7 +70,7 @@ function pesquisar(event) {
     h2Catalogo.className = ""
     if (achados == 0) {
         h2Catalogo.innerHTML = `Desculpe, não encontramos nenhum desenho com base na pesquisa "${input.value}"`
-    } else if (achados == 1){
+    } else if (achados == 1) {
         h2Catalogo.innerHTML = `Foi encontrado ${achados} desenho com base na pesquisa "${input.value}"`
     } else {
         h2Catalogo.innerHTML = `Foram encontrados ${achados} desenhos com base na pesquisa "${input.value}"`
@@ -192,49 +192,49 @@ function adicionaInteresse(element) {
 // ==== Fim acessados recentemente ====
 
 // ==== Início do mecanismo de carrosel no catálogo 
-if (window.location.pathname.endsWith(pathPaginaToons)){
+if (window.location.pathname.endsWith(pathPaginaToons)) {
     let contador = []
     arrowsRight.forEach((arrow, i) => {
         const itemNumber = listasDesenhos[i].querySelectorAll("img").length
         contador.push(0)
         arrow.addEventListener('click', () => {
-            if (window.matchMedia("(max-width: 400px)").matches){
-                if ((contador[i]) < itemNumber -1){
+            if (window.matchMedia("(max-width: 400px)").matches) {
+                if ((contador[i]) < itemNumber - 1) {
                     contador[i]++
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.89}px)`
                 }
-            } else if (window.matchMedia("(max-width: 800px)").matches){ 
-                if ((contador[i]) < itemNumber -2){
+            } else if (window.matchMedia("(max-width: 800px)").matches) {
+                if ((contador[i]) < itemNumber - 2) {
                     contador[i]++
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.445}px)`
                 }
-            } else if (window.matchMedia("(max-width: 1100px)").matches){ 
-                if ((contador[i]) < itemNumber -3){
+            } else if (window.matchMedia("(max-width: 1100px)").matches) {
+                if ((contador[i]) < itemNumber - 3) {
                     contador[i]++
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.299}px)`
                 }
             } else {
-                if ((contador[i]) < itemNumber -4){
+                if ((contador[i]) < itemNumber - 4) {
                     contador[i]++
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value - window.innerWidth * 0.223}px)`
                 }
             }
             var temp = arrow.style.pointerEvents
             arrow.style.pointerEvents = "none"
-            setTimeout(() => {arrow.style.pointerEvents = temp}, 500)
+            setTimeout(() => { arrow.style.pointerEvents = temp }, 500)
         })
-        
+
     })
     arrowsLeft.forEach((arrow, i) => {
         const itemNumber = listasDesenhos[i].querySelectorAll("img").length
         arrow.addEventListener('click', () => {
-            if ((contador[i]) > 0){
+            if ((contador[i]) > 0) {
                 contador[i]--
-                if (window.matchMedia("(max-width: 400px)").matches){
+                if (window.matchMedia("(max-width: 400px)").matches) {
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.89}px)`
-                } else if (window.matchMedia("(max-width: 800px)").matches){   
+                } else if (window.matchMedia("(max-width: 800px)").matches) {
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.445}px)`
-                } else if (window.matchMedia("(max-width: 1100px)").matches){   
+                } else if (window.matchMedia("(max-width: 1100px)").matches) {
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.299}px)`
                 } else {
                     listasDesenhos[i].style.transform = `translateX(${listasDesenhos[i].computedStyleMap().get("transform")[0].x.value + window.innerWidth * 0.223}px)`
@@ -242,7 +242,7 @@ if (window.location.pathname.endsWith(pathPaginaToons)){
             }
             var temp = arrow.style.pointerEvents
             arrow.style.pointerEvents = "none"
-            setTimeout(() => {arrow.style.pointerEvents = temp}, 500)
+            setTimeout(() => { arrow.style.pointerEvents = temp }, 500)
         })
     })
 }
