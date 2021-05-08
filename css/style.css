@@ -551,6 +551,18 @@ footer p {
     color: #F7F8F5;
 }
 
+@media (max-width: 500px) {
+    footer p {
+        font-size: .8em;
+    }
+}
+
+@media (max-width: 400px) {
+    footer p {
+        font-size: .7em;
+    }
+}
+
 footer a , footer a:hover{
     color: inherit;
     font-weight: bold;
