@@ -436,14 +436,14 @@ body {
     text-align: justify;
 }
 
-hr.solid {
+.solid {
     border-top: 1px solid #503092;
     width: 90%;
 }
 
 .time h2 {
     margin-top: 0;
-    padding: 1em 1em 0.2em;
+    padding: 1em 0em;
     color: #FF66C4;
     font-family: 'Poppins', monospace;
     letter-spacing: -0.75px;
@@ -465,6 +465,11 @@ hr.solid {
     text-decoration: none;
 }
 
+.container-grids {
+    padding: 5% 5% 1% 5%;
+    text-align: justify;
+}
+
 .grid-imagem-direita {
     display: grid;
     grid-template-columns: 75% 25%;
@@ -474,7 +479,7 @@ hr.solid {
 }
 
 .item-texto-esquerda {
-    padding: 3% 4% 6% 4%;
+    padding: 3% 4% 6% 0%;
     text-align: justify;
 }
 
@@ -498,7 +503,6 @@ hr.solid {
     justify-content: center;
     width: 98%;
     margin-bottom: 3%;
-    margin-left: 3%;
 }
 
 .item-imagem-esquerda {
@@ -516,7 +520,7 @@ hr.solid {
 }
 
 .item-texto-direita {
-    padding: 3% 4% 6% 4%;
+    padding: 3% 0% 6% 4%;
     text-align: justify;
 }
 @media (max-width: 400px){
@@ -623,6 +627,11 @@ footer a , footer a:hover{
     color:rgba(255, 255, 255, 0.5)
 }
 
+.dark-theme .solid {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .dark-theme footer {
     background-color: #1d1d1d;
 }
+
