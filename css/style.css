@@ -8,7 +8,10 @@ body {
     margin: 0;
     font-family: 'Alegreya Sans', monospace;
     letter-spacing: 1px;
-   
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F8F5;
 }
 /* ==== Início do header ==== */
 .header-desktop{
@@ -535,10 +538,11 @@ body {
     
 } */
 footer {
-    position: absolute;
     text-align: center;
     background-color: #503092;
     margin: 0;
+    min-height: 5vh;
+    margin-top: auto;
     width: 100%;
     padding: 1vh 0;
 }
