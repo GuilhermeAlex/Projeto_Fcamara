@@ -11,7 +11,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #F7F8F5;
+    background-color: var(--primary-color);
 }
 /* ==== Início do header ==== */
 .header-desktop{
