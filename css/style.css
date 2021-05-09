@@ -44,6 +44,7 @@ body {
 .nav-desktop ul {
     margin: 0;
     line-height: 1.15;
+    padding: 3vw;
 }
 
 .nav-desktop li {
@@ -62,7 +63,7 @@ body {
 }
 
 .header-search-avatar {
-    display: inline-block;
+    display: flex;
     position: absolute;
     right: 10px;
     top: 50%;
@@ -83,11 +84,6 @@ body {
 .header-search {
     width: 15vw;
     height: 4vh;
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    transform: translateY(-50%);
-    right: 4vw;
     margin-right: 2vw;
     border-width: 2px;
     border-color: white;
@@ -95,6 +91,12 @@ body {
     font-size: inherit;
     line-height: inherit;
     box-sizing: border-box;
+}
+
+@media (max-width: 500px){
+    .header-search{
+        display: none;
+    }
 }
 
 .header-avatar {
@@ -208,14 +210,18 @@ body {
     color: #FFEC3E;
     background-color: #503092;
 }
+
 @media (max-width: 414px){
     .materiais{
         display: flex;
         flex-flow: column;
         align-items: center;
     }
-    .header-search{
-        display: none;
+    .nav-desktop *{
+        font-size: .95em;
+    }
+    .nav-desktop ul{
+        padding-left: 4vw;
     }
     .item-imagem-esquerda img , .item-imagem-direita img{
         width: 90px!important;
@@ -224,6 +230,13 @@ body {
         font-size: large;
     }
 }
+
+@media (max-width: 330px) {
+    .nav-desktop *{
+        font-size: .8em;
+    }
+}
+
 @media (max-width: 1024px){
     .responseCard img {
         width: 180px; 
