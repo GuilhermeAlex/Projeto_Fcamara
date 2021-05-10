@@ -420,6 +420,11 @@ body {
     border: 0;
 }
 
+.btn-primary:hover {
+    background-color: inherit;
+    border-color: inherit;
+}
+
 .modal-content {
     padding: 20px;
     background-color: #503092;
