@@ -10,15 +10,15 @@ Tecnologias Utilizadas:
 - JavaScript
 
 Desenvolvedores do Projeto: 
-- Drix Piciconi
+- Drix Piciconi - 
   GitHub: https://github.com/neuropvnk
   Linkedin: https://www.linkedin.com/in/drixpiccioni/
-- Guilherme Alex Lima 
-  GitHub: https://github.com/GuilhermeAlex
+- Guilherme Alex Lima -
+  GitHub: https://github.com/GuilhermeAlex 
   Linkedin: https://www.linkedin.com/in/guilherme-alex-663a51143/
-- Thiago de Jesus 
+- Thiago de Jesus -
   GitHub: https://github.com/ThiagoDeJesus
   Linkedin: https://www.linkedin.com/in/thiago-de-jesus-ramos-a0a406154/
-- Victor Lima 
+- Victor Lima -
   GitHub: https://github.com/VictorLimass
   Linkedin: https://www.linkedin.com/in/victor-lima-505677211/
