@@ -373,17 +373,15 @@ body {
 }
 
 .item:hover {
-    margin-left: 4vw;
-    margin-right: 4vw;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out .4s;
 }
 
 .item :hover .toons-desenhos {
-    transform: scale(1.2);
+    transform: scale(1.06);
 }
 
 .item-pesquisa :hover .toons-desenhos {
-    transform: scale(1.1);
+    transform: scale(1.06);
 }
 
 .toons-desenhos {
